@@ -9,6 +9,7 @@ public class Movement3D : MonoBehaviour
 {
     // visible in Unity but still private vars
     [SerializeField] private float speed;
+    [SerializeField] private float maxSpeed;
     [SerializeField] private float jumpForce;
 
     private InputHandler3D playerInput;
@@ -23,7 +24,10 @@ public class Movement3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
     }
 
     void FixedUpdate()
@@ -34,7 +38,7 @@ public class Movement3D : MonoBehaviour
 
     private void Move()
     {
-        
+        rb.AddForce(playerInput.movementInput * speed, ForceMode.Impulse);
     }
 
     private void Jump()
