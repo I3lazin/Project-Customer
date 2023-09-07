@@ -12,6 +12,7 @@ public class Movement3D : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float jumpForce;
 
+    private bool jumpPressed;
     private InputHandler3D playerInput;
     private Rigidbody rb;
 
@@ -28,12 +29,16 @@ public class Movement3D : MonoBehaviour
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
+        if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f))
+        {
+            jumpPressed = true;
+        }
     }
 
     void FixedUpdate()
     {
         Move();
-        if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down),1.1f)) { Jump(); }
+        if (jumpPressed) { Jump(); jumpPressed = false; }
     }
 
     private void Move()
@@ -44,5 +49,10 @@ public class Movement3D : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.1f)));
     }
 }
