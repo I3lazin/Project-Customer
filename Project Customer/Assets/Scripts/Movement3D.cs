@@ -26,13 +26,9 @@ public class Movement3D : MonoBehaviour
     void Update()
     {
         if (rb.velocity.magnitude > maxSpeed)
-        {
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
-        }
+        { rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed); }
         if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f))
-        {
-            jumpPressed = true;
-        }
+        { jumpPressed = true; }
     }
 
     void FixedUpdate()
