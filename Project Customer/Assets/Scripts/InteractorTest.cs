@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class InteractorTest : MonoBehaviour, IInteractable
 {
+    [SerializeField] private string requiredObjectID;
     public void Interact()
     {
-        Debug.Log(Random.Range(0, 100));
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if (requiredObjectID == null)
+        {
+            Debug.Log(Random.Range(0, 100));
+            GetComponent<Renderer>().material.color = Color.green;
+        } else {
+            if (FindObjectOfType<GameManager>().bools[requiredObjectID] == true)
+            {
+                Debug.Log(Random.Range(0, 100));
+                GetComponent<Renderer>().material.color = Color.green;
+            }
+            else
+            {
+                Debug.Log("You haven't acquired the required object yet.");
+                GetComponent<Renderer>().material.color = Color.red;
+            }
+        }
         
     }
 }

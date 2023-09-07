@@ -25,8 +25,9 @@ public class Movement3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.magnitude > maxSpeed)
-        { rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed); }
+        float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
+        if (XZmag > maxSpeed)
+        { rb.velocity = new Vector3(rb.velocity.x / XZmag * speed, rb.velocity.y, rb.velocity.z / XZmag * speed); }
         if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f))
         { jumpPressed = true; }
     }
