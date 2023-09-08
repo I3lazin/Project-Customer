@@ -9,12 +9,15 @@ public class CheckCollision : MonoBehaviour
     [SerializeField] private int nextScene;
     [SerializeField] private LayerMask SceneChange;
     private Camera mainCamera;
-    int range = 4;
+    //private Transform player;
+    float range = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
+        //player = GameObject.Find("Player").transform;
+
     }
 
     // Update is called once per frame
@@ -22,13 +25,12 @@ public class CheckCollision : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Ray gunRay = new Ray(mainCamera.transform.position, mainCamera.transform.forward);
+            Ray lookRay = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
 
             //looks if a ray is hit and what it hit
-            if (Physics.Raycast(gunRay, out RaycastHit hitInfo, range, SceneChange))
+            if (Physics.Raycast(lookRay, out RaycastHit hitInfo, range, SceneChange))
             {
-
-                if (hitInfo.collider.gameObject.TryGetComponent(out SceneChange buyEnd))
+                if (hitInfo.collider.gameObject.TryGetComponent(out SceneChange changeScene))
                 {
                     SceneManager.LoadScene(nextScene);
                 }

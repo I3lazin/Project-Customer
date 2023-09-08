@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtPlayerScript : MonoBehaviour
+public class LookAtCamera : MonoBehaviour
 {
 
     public Transform mainCamera;
