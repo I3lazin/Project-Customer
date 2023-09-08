@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerCheck : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class TriggerCheck : MonoBehaviour
         if (other.tag == "collectable")
         {
             other.GetComponent<Collectable>().Collect();
+        } 
+        if (other.tag == "End")
+        {
+            SceneManager.LoadScene("Dasha");
         }
     }
 }
