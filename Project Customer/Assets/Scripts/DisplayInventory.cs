@@ -10,6 +10,7 @@ public class DisplayInventory : MonoBehaviour
     public int Y_SPACE_BETWEEN_ITEMS;
     public int Y_START;
     public Dictionary<string, GameObject> itemsInIventory = new Dictionary<string, GameObject>();
+    public List<string> DisplayedItems = new List<string>();
 
     void Start()
     {
@@ -38,10 +39,12 @@ public class DisplayInventory : MonoBehaviour
         int i = 0;
         foreach (var id in itemsInIventory.Keys)
         {
-            if(!itemsInIventory.ContainsKey(id))
+            if(!DisplayedItems.Contains(id))
             {
+                Debug.Log("add new");
                 var obj = Instantiate(itemsInIventory[id], Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
+                DisplayedItems.Add(id);
                 Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
             }
             ++i;
