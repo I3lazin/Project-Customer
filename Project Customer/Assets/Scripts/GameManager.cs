@@ -18,6 +18,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
     void Update()
     {
         foreach (var id in bools.Keys)
