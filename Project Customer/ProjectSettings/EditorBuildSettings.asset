@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ally.unity
     guid: a43ce059565d3b848b6ca3346c0947e4
+  - enabled: 1
+    path: Assets/Scenes/Dasha.unity
+    guid: ab2b32819fc4f1e4f91e0c1ed6df72ad
+  - enabled: 1
+    path: Assets/Scenes/IconCreator.unity
+    guid: c70466d6695371f49b63bb527253047c
+  - enabled: 1
+    path: Assets/Scenes/Tim.unity
+    guid: 125805809f0a42b45921063b5860568f
   m_configObjects: {}
