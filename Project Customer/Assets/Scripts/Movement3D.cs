@@ -30,6 +30,7 @@ public class Movement3D : MonoBehaviour
         { rb.velocity = new Vector3(rb.velocity.x / XZmag * speed, rb.velocity.y, rb.velocity.z / XZmag * speed); }
         if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f))
         { jumpPressed = true; }
+        transform.eulerAngles += playerInput.mouseInputX;
     }
 
     void FixedUpdate()
@@ -40,7 +41,7 @@ public class Movement3D : MonoBehaviour
 
     private void Move()
     {
-        rb.AddForce(playerInput.movementInput * speed, ForceMode.Impulse);
+        rb.AddRelativeForce(playerInput.movementInput * speed, ForceMode.Impulse);
     }
 
     private void Jump()
