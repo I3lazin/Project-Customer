@@ -27,6 +27,6 @@ public class CameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
         //playerBody.Rotate(Vector3.right * mouseY);  //use this for weapon later on
-        playerBody.Rotate(Vector3.up * mouseX);
+        //playerBody.Rotate(Vector3.up * mouseX);
     }
 }

@@ -10,7 +10,6 @@ public class AchievementController : MonoBehaviour
     public GameObject achTitle;
     public GameObject achDescription;
     public bool achActive;
-    //private CheckArea checkArea;
 
     //achievemnt 1 var
     public GameObject ach1Icon;
@@ -18,19 +17,8 @@ public class AchievementController : MonoBehaviour
     public int ach1Trigger = 1;
     public int hasAchieved1;
 
-    private void Awake()
-    {
-        //checkArea = GetComponent<CheckArea>();
-    }
-
     void Update()
     {
-        //if (checkArea.hasEntredArea == true)
-        //{
-        //    Debug.Log(ach1Count);
-        //    ach1Count = 1;
-        //}
-
         hasAchieved1 = PlayerPrefs.GetInt("Achievement1");
         if(ach1Count == ach1Trigger && hasAchieved1 != 1)
         {
