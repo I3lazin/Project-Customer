@@ -18,12 +18,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnApplicationFocus(bool hasFocus)
+    private void Start()
     {
-        if (hasFocus)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
