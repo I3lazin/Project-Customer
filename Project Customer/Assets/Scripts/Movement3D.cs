@@ -16,6 +16,9 @@ public class Movement3D : MonoBehaviour
     private InputHandler3D playerInput;
     private Rigidbody rb;
 
+    //animation
+    public Animator animator;
+
     private void Awake()
     {
         playerInput = GetComponent<InputHandler3D>();
@@ -42,11 +45,33 @@ public class Movement3D : MonoBehaviour
     private void Move()
     {
         rb.AddRelativeForce(playerInput.movementInput * speed, ForceMode.Impulse);
+
+        if(Mathf.Abs(playerInput.movementInput.z) > 0.01)
+        {
+            animator.SetFloat("Speed", 1);
+        } else if(Mathf.Abs(playerInput.movementInput.x) > 0.01)
+        {
+            animator.SetFloat("Speed", 1);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
     }
 
     private void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        animator.SetBool("IsJumping", true);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision != null)
+        {
+            animator.SetBool("IsJumping", false);
+
+        }
     }
 
     private void OnDrawGizmos()

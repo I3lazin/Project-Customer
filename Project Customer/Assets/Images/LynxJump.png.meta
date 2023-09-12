@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f874af3140317054887c792c836f7140
+guid: 254eede429277f14ebb504e1ebaa7d4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_0
+      name: LynxJump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,20 +125,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc7903c291d1004e851674b62a15a75
-      internalID: -1588083664
+      spriteID: 6aa3fe163f2a3b246a4efff3676ade90
+      internalID: -928408667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_1
+      name: LynxJump_1
       rect:
         serializedVersion: 2
         x: 2048
@@ -146,20 +146,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 161c8ed0b8a8fcd48aade9842d338f4a
-      internalID: 827204508
+      spriteID: 3695a67ea85039443984d296b1cbc1c6
+      internalID: -993123479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_2
+      name: LynxJump_2
       rect:
         serializedVersion: 2
         x: 4096
@@ -167,20 +167,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fcc8ee652c4b8c4ba00ec751fa82e64
-      internalID: -138793518
+      spriteID: 873c5aedc8045d745886872cd11d1efe
+      internalID: 718807696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_3
+      name: LynxJump_3
       rect:
         serializedVersion: 2
         x: 6144
@@ -188,20 +188,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e667ce7676dac34cb74c0841782bb88
-      internalID: 1064574106
+      spriteID: 5236b1eabe07f044e80b8553efbd6810
+      internalID: 1764560098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_4
+      name: LynxJump_4
       rect:
         serializedVersion: 2
         x: 8192
@@ -209,20 +209,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a1ac83d978d25c4ab54607b527a6910
-      internalID: 1329246486
+      spriteID: b0ae3e579db1d954891d986cc02a822a
+      internalID: -1191058302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_5
+      name: LynxJump_5
       rect:
         serializedVersion: 2
         x: 10240
@@ -230,20 +230,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 928be559491ac3045a07108b7f279909
-      internalID: 1378169855
+      spriteID: 74b84c2bc733983489c846410525d245
+      internalID: -1761728233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LynxWalkSpriteSheet_6
+      name: LynxJump_6
       rect:
         serializedVersion: 2
         x: 12288
@@ -251,35 +251,14 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e5099c3fcbeea458d880f4ed252630
-      internalID: -510890184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LynxWalkSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 14336
-        y: 0
-        width: 2048
-        height: 2048
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed23f6a0c9a80eb43a5e64e4381fd559
-      internalID: 544666878
+      spriteID: c376988ff8ee42948947a6ebb7113b5c
+      internalID: 1745866824
       vertices: []
       indices: 
       edges: []
@@ -287,7 +266,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a4cfe420037a5af4da51e0fe43d78a2e
+    spriteID: cb0a41fd668f43e4cb424c96a5c4d0e0
     internalID: 0
     vertices: []
     indices: 
@@ -295,14 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LynxWalkSpriteSheet_0: -1588083664
-      LynxWalkSpriteSheet_1: 827204508
-      LynxWalkSpriteSheet_2: -138793518
-      LynxWalkSpriteSheet_3: 1064574106
-      LynxWalkSpriteSheet_4: 1329246486
-      LynxWalkSpriteSheet_5: 1378169855
-      LynxWalkSpriteSheet_6: -510890184
-      LynxWalkSpriteSheet_7: 544666878
+      LynxJump_0: -928408667
+      LynxJump_1: -993123479
+      LynxJump_2: 718807696
+      LynxJump_3: 1764560098
+      LynxJump_4: -1191058302
+      LynxJump_5: -1761728233
+      LynxJump_6: 1745866824
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
