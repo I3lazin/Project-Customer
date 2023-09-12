@@ -31,7 +31,7 @@ public class Movement3D : MonoBehaviour
         float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
         if (XZmag > maxSpeed)
         { rb.velocity = new Vector3(rb.velocity.x / XZmag * speed, rb.velocity.y, rb.velocity.z / XZmag * speed); }
-        if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f))
+        if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.5f))
         { jumpPressed = true; }
         transform.eulerAngles += playerInput.mouseInputX;
     }
@@ -82,6 +82,6 @@ public class Movement3D : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.1f)));
+        Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.5f)));
     }
 }
