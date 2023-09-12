@@ -40,6 +40,7 @@ public class Movement3D : MonoBehaviour
     {
         Move();
         if (jumpPressed) { Jump(); jumpPressed = false; }
+        animator.SetBool("JustJumped", Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f));
     }
 
     private void Move()
@@ -62,7 +63,11 @@ public class Movement3D : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        animator.SetBool("JustJumped", true);
         animator.SetBool("IsJumping", true);
+        animator.SetBool("IsInAir", true);
+        animator.SetBool("JustJumped", false);
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -70,6 +75,7 @@ public class Movement3D : MonoBehaviour
         if(collision != null)
         {
             animator.SetBool("IsJumping", false);
+            animator.SetBool("IsInAir", false);
 
         }
     }

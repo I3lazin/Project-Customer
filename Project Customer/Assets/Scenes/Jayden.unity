@@ -818,10 +818,20 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1864575784}
+    - target: {fileID: 6005222297309722102, guid: 3cbc72a963237c94296d2d3fc417fafc,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6005222297309722103, guid: 3cbc72a963237c94296d2d3fc417fafc,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005222297419945251, guid: 3cbc72a963237c94296d2d3fc417fafc,
+        type: 3}
+      propertyPath: far clip plane
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6005222297419945255, guid: 3cbc72a963237c94296d2d3fc417fafc,
         type: 3}
