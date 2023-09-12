@@ -7,6 +7,7 @@ TagManager:
   - collectable
   - End
   - Gateway
+  - IventoryItem
   layers:
   - Default
   - TransparentFX
