@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2848533363888844677}
-  m_LocalRotation: {x: 0.29925972, y: -0.032855794, z: 0.010311378, w: 0.9535501}
-  m_LocalPosition: {x: -6.279992, y: 2.6300826, z: -19.95853}
+  m_LocalRotation: {x: 0.13580184, y: -0.01400783, z: 0.0019202718, w: 0.99063516}
+  m_LocalPosition: {x: 0.17, y: 1.6799998, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 2848533364210999430}
   - component: {fileID: 2848533364210999429}
   - component: {fileID: 2848533364210999428}
-  - component: {fileID: 2848533364210999427}
+  - component: {fileID: 1199940970}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -315,8 +315,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &2848533364210999427
-BoxCollider:
+--- !u!136 &1199940970
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -325,9 +325,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.130037, y: 2.202122, z: 2.42893}
-  m_Center: {x: -0.2895006, y: 0.20747745, z: 0.65436804}
+  m_Radius: 1.2099297
+  m_Height: 2.4306426
+  m_Direction: 0
+  m_Center: {x: -0.14871144, y: 0.08692527, z: 0.6504736}
 --- !u!1 &2848533364847205705
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +354,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2848533364847205705}
-  m_LocalRotation: {x: 0.16334084, y: -0.01699958, z: 0.0028149548, w: 0.98641926}
+  m_LocalRotation: {x: 0.13580184, y: -0.01400783, z: 0.0019202718, w: 0.99063516}
   m_LocalPosition: {x: 0.17, y: 1.6799998, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -434,8 +435,8 @@ MonoBehaviour:
   m_Strategy: 1
   m_MaximumEffort: 4
   m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_Damping: 2
+  m_DampingWhenOccluded: 2
   m_OptimalTargetDistance: 0
 --- !u!1 &2848533365085087905
 GameObject:
@@ -527,8 +528,8 @@ MonoBehaviour:
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0
+  m_SoftZoneHeight: 0
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
