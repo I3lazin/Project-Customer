@@ -8,6 +8,7 @@ TagManager:
   - End
   - Gateway
   - IventoryItem
+  - Obstacles
   - SceneChanger
   layers:
   - Default
@@ -19,8 +20,9 @@ TagManager:
   - Terrain
   - SceneChange
   - Location1
+  - Player
+  - Obstacles
   - Camera
-  - 
   - 
   - 
   - 

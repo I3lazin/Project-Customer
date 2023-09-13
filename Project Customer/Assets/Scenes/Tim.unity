@@ -523,7 +523,7 @@ Terrain:
   m_GameObject: {fileID: 513101000}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: ed3305c4a692f5e4a959a6e1c54c937c, type: 2}
+  m_TerrainData: {fileID: 0}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -724,7 +724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635261880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 1, z: -10}
+  m_LocalPosition: {x: -2.33, y: 1, z: -6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -749,10 +749,10 @@ MonoBehaviour:
   delay: 0.3
   timeToSpotPlayer: 0.5
   spotlight: {fileID: 1359424826}
-  viewDistance: 6.5
+  viewDistance: 9.7
   viewMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1024
   pathHolder: {fileID: 522805847}
 --- !u!1 &1186445588
 GameObject:
@@ -941,20 +941,20 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0, b: 0.09850311, a: 1}
+  m_Color: {r: 0, g: 0.9245283, b: 0.17429468, a: 1}
   m_Intensity: 426.97
-  m_Range: 8
-  m_SpotAngle: 75.69893
-  m_InnerSpotAngle: 72.34546
+  m_Range: 13.004145
+  m_SpotAngle: 90.00011
+  m_InnerSpotAngle: 87.9915
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 1
-  m_UsePipelineSettings: 1
+  m_UsePipelineSettings: 0
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
@@ -1019,14 +1019,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359424825}
-  m_LocalRotation: {x: 0.025087953, y: -0, z: -0, w: 0.9996852}
-  m_LocalPosition: {x: 0, y: -0.652, z: -0.03600025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.7, z: -0.03600025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 635261884}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.875, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1439822772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,9 +1557,9 @@ GameObject:
   - component: {fileID: 1893028550}
   - component: {fileID: 1893028549}
   - component: {fileID: 1893028548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1634,14 +1634,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893028547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.182, y: 0.5, z: -6.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.54184556, z: -0, w: 0.8404781}
+  m_LocalPosition: {x: -7.182, y: 1.5, z: -7.88}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 65.619, z: 0}
 --- !u!1 &2121861406
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2848533363888844675}
   - component: {fileID: 2848533363888844676}
   - component: {fileID: 2848533363888844672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2848533363888844677}
-  m_LocalRotation: {x: 0.13580184, y: -0.01400783, z: 0.0019202718, w: 0.99063516}
+  m_LocalRotation: {x: 0.13580184, y: -0.014007866, z: 0.0019202769, w: 0.99063516}
   m_LocalPosition: {x: 0.17, y: 1.6799998, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -167,9 +167,9 @@ GameObject:
   - component: {fileID: 2848533364210999437}
   - component: {fileID: 2848533364210999430}
   - component: {fileID: 2848533364210999429}
-  - component: {fileID: 2848533364210999428}
   - component: {fileID: 1199940970}
-  m_Layer: 0
+  - component: {fileID: 689049573}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -236,6 +236,8 @@ MonoBehaviour:
   speed: 3
   maxSpeed: 4
   jumpForce: 35
+  stealthMultiplier: 0.5
+  sensitivity: 2
 --- !u!114 &2848533364210999430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +265,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f56d081eb22cc842889af34a02a0f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &2848533364210999428
+--- !u!136 &1199940970
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2848533364210999438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.2099297
+  m_Height: 2.4306426
+  m_Direction: 0
+  m_Center: {x: -0.14871144, y: 0.08692527, z: 0.6504736}
+--- !u!212 &689049573
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,26 +325,12 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 27.324455, y: 20.48}
+  m_Size: {x: 4.554076, y: 3.4133334}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!136 &1199940970
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2848533364210999438}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.2099297
-  m_Height: 2.4306426
-  m_Direction: 0
-  m_Center: {x: -0.14871144, y: 0.08692527, z: 0.6504736}
 --- !u!1 &2848533364847205705
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +342,7 @@ GameObject:
   - component: {fileID: 2848533364847205703}
   - component: {fileID: 2848533364847205704}
   - component: {fileID: 2848533364847205702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +356,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2848533364847205705}
-  m_LocalRotation: {x: 0.13580184, y: -0.01400783, z: 0.0019202718, w: 0.99063516}
+  m_LocalRotation: {x: 0.13580184, y: -0.014007866, z: 0.0019202769, w: 0.99063516}
   m_LocalPosition: {x: 0.17, y: 1.6799998, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -450,7 +452,7 @@ GameObject:
   - component: {fileID: 2848533365085087901}
   - component: {fileID: 2848533365085087903}
   - component: {fileID: 2848533365085087900}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

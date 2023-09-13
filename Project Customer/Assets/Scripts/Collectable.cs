@@ -9,12 +9,6 @@ public class Collectable : MonoBehaviour
     [SerializeField] private GameObject interactableIcon;
     [SerializeField] private GameObject hint;
 
-
-    /*    private void Awake()
-        {
-            FindObjectOfType<DisplayInventory>().itemsInIventory.Add(id, itemPrefabHUD);
-        }
-    */
     public void Collect()
     {
         hint.SetActive(true);
