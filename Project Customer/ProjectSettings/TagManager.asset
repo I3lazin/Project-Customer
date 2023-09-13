@@ -8,6 +8,7 @@ TagManager:
   - End
   - Gateway
   - IventoryItem
+  - SceneChanger
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Terrain
   - SceneChange
   - Location1
-  - 
+  - Camera
   - 
   - 
   - 

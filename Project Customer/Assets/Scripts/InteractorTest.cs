@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractorTest : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject removeObject;
+    [SerializeField] private GameObject removeHint;
     [SerializeField] private string requiredObjectID;
     [SerializeField] private GameObject nextTarget;
     private DisplayInventory inv;
@@ -28,9 +29,11 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     Debug.Log(Random.Range(0, 100));
                     GetComponent<Renderer>().material.color = Color.green;
                 } else {
+                    AchievementController.ach1Count = 1;
                     nextTarget.SetActive(true);
                     nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);
+                    removeHint.SetActive(false);
 /*                    inv.RemoveObject(requiredObjectID);*/
                     Destroy(removeObject);
                 }
