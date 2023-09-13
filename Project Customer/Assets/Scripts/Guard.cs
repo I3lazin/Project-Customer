@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
@@ -70,7 +71,11 @@ public class Guard : MonoBehaviour
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             if (angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                return true;
+                if (!Physics.Linecast(transform.position, player.position, viewMask))
+                {
+                    Debug.Log("testing raycast");
+                    return true;
+                }
             }
         }
         return false;
