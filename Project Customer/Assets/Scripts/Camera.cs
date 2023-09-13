@@ -10,7 +10,6 @@ public class Camera : MonoBehaviour
         yRotation = transform.rotation.eulerAngles.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
         yRotation += Input.GetAxis("Mouse Y") * 2.0f;

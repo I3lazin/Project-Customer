@@ -11,6 +11,8 @@ public class Movement3D : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float stealthMultiplier;
+    [SerializeField] private float sensitivity;
 
     private bool jumpPressed;
     private InputHandler3D playerInput;
@@ -25,12 +27,17 @@ public class Movement3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float maximumSpeed;
+        if (playerInput.sneakInput) { maximumSpeed = maxSpeed * stealthMultiplier; }
+        else { maximumSpeed = maxSpeed; }
+
+
         float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
-        if (XZmag > maxSpeed)
-        { rb.velocity = new Vector3(rb.velocity.x / XZmag * speed, rb.velocity.y, rb.velocity.z / XZmag * speed); }
+        if (XZmag > maximumSpeed)
+        { rb.velocity = new Vector3(rb.velocity.x / XZmag * maximumSpeed, rb.velocity.y, rb.velocity.z / XZmag * maximumSpeed); }
         if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.5f))
         { jumpPressed = true; }
-        transform.eulerAngles += playerInput.mouseInputX;
+        transform.eulerAngles += playerInput.mouseInputX * sensitivity;
     }
 
     void FixedUpdate()

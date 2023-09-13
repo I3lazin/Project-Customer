@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class Guard : MonoBehaviour
 {
-    public static event System.Action OnGuardHasCapturedPlayer;
 
     public float speed = 5;
     public float turnSpeed = 90;
@@ -21,7 +23,7 @@ public class Guard : MonoBehaviour
     public Transform pathHolder;
     Transform player;
     Color originalSpotlightColor;
-
+    private InputHandler3D playerInput;
 
     void Start()
     {
@@ -39,12 +41,16 @@ public class Guard : MonoBehaviour
         StartCoroutine(FollowPath(waypoints));
     }
 
+    private void Awake()
+    {
+        playerInput = FindObjectOfType<InputHandler3D>();
+    }
+
     void Update()
     {
         if (CanSeePlayer())
         {
             playerVisibleTimer += Time.deltaTime;
-            spotlight.color = Color.red;
         }
         else
         {
@@ -57,16 +63,14 @@ public class Guard : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        if (Vector3.Distance(transform.position, player.position) < viewDistance)
-        {
+        if (Vector3.Distance(transform.position, player.position) < viewDistance && !playerInput.sneakInput)
+        {   
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
+            
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             if (angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                if (Physics.Raycast(transform.position, player.position, viewMask))
-                {
-                    return true;
-                }
+                return true;
             }
         }
         return false;
@@ -132,14 +136,10 @@ public class Guard : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (OnGuardHasCapturedPlayer != null)
-            {
-                OnGuardHasCapturedPlayer();
-                collision.gameObject.GetComponent<Movement3D>().enabled = false;
-                collision.gameObject.GetComponentInChildren<Camera>().enabled = false;
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
     private void OnDrawGizmos()
     {
         Vector3 startPosition = pathHolder.GetChild(0).position;
