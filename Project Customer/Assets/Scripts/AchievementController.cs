@@ -18,17 +18,39 @@ public class AchievementController : MonoBehaviour
     public static int ach1Count;
     public int ach1Trigger = 1;
     public int hasAchieved1;
-    
+
+    //achievemnt 2 var
+    public static int ach2Count;
+    public int ach2Trigger = 1;
+    public int hasAchieved2;
+
+    //achievemnt 3 var
+    public static int ach3Count;
+    public int ach3Trigger = 1;
+    public int hasAchieved3;
+
 
     void Update()
     {
         //ach1Count = interactorTest.getsAchievement;
         Debug.Log("ach1count = " + ach1Count);
+
         hasAchieved1 = PlayerPrefs.GetInt("Achievement1");
-        if(ach1Count == ach1Trigger && hasAchieved1 != 1)
+        hasAchieved2 = PlayerPrefs.GetInt("Achievement2");
+        hasAchieved3 = PlayerPrefs.GetInt("Achievement3");
+
+        if (ach1Count == ach1Trigger && hasAchieved1 != 1)
         {
             StartCoroutine(TriggerAch1());
         }
+
+        if (ach2Count == ach2Trigger && hasAchieved2 != 1)
+        {
+            StartCoroutine(TriggerAch2());
+        }
+
+        if (ach3Count == ach3Trigger && hasAchieved3 != 1)
+        { StartCoroutine(TriggerAch3()); }
     }
 
     IEnumerator TriggerAch1()
@@ -50,5 +72,31 @@ public class AchievementController : MonoBehaviour
         achActive = false;
 
 
+    }
+
+    IEnumerator TriggerAch2()
+    {
+        achActive = true;
+        hasAchieved2 = 1;
+        achievement.SetActive(true);
+        PlayerPrefs.SetInt("Achievement2", hasAchieved2);
+
+        yield return new WaitForSeconds(7);
+
+        achievement.SetActive(false);
+        achActive = false;
+    }
+
+    IEnumerator TriggerAch3()
+    {
+        achActive = true;
+        hasAchieved3 = 1;
+        achievement.SetActive(true);
+        PlayerPrefs.SetInt("Achievement3", hasAchieved3);
+
+        yield return new WaitForSeconds(7);
+
+        achievement.SetActive(false);
+        achActive = false;
     }
 }
