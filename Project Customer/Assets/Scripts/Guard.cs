@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class Guard : MonoBehaviour
 {
-    public static event System.Action OnGuardHasCapturedPlayer;
 
     public float speed = 5;
     public float turnSpeed = 90;
@@ -21,7 +24,7 @@ public class Guard : MonoBehaviour
     public Transform pathHolder;
     Transform player;
     Color originalSpotlightColor;
-
+    private InputHandler3D playerInput;
 
     void Start()
     {
@@ -39,12 +42,16 @@ public class Guard : MonoBehaviour
         StartCoroutine(FollowPath(waypoints));
     }
 
+    private void Awake()
+    {
+        playerInput = FindObjectOfType<InputHandler3D>();
+    }
+
     void Update()
     {
         if (CanSeePlayer())
         {
             playerVisibleTimer += Time.deltaTime;
-            spotlight.color = Color.red;
         }
         else
         {
@@ -57,13 +64,14 @@ public class Guard : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        if (Vector3.Distance(transform.position, player.position) < viewDistance)
-        {
+        if (Vector3.Distance(transform.position, player.position) < viewDistance && !playerInput.sneakInput)
+        {   
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
+            
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             if (angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                if (Physics.Raycast(transform.position, player.position, viewMask))
+                if (!Physics.Linecast(transform.position, player.position, viewMask))
                 {
                     return true;
                 }
@@ -76,7 +84,7 @@ public class Guard : MonoBehaviour
     {
         transform.position = waypoints[0];
 
-        int targetWaypointIndex = 1;
+        int targetWaypointIndex = 0;
         Vector3 lastTarget = new Vector3();
         bool firstLoop = false;
         Vector3 targetWaypoint = waypoints[targetWaypointIndex];
@@ -85,30 +93,44 @@ public class Guard : MonoBehaviour
         while (true)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-            if (lastTarget == targetWaypoint)
+            if(waypoints.Length > 1)
             {
-                yield return StartCoroutine(TurnToFace(targetWaypoint));
-                lastTarget = new Vector3();
-            }
-            if (transform.position == targetWaypoint)
-            {
-                targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
-                targetWaypoint = waypoints[targetWaypointIndex];
-                new WaitForSeconds(delay);
-                yield return StartCoroutine(TurnToFace(targetWaypoint));
-                firstLoop = true;
-            }
-            while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
-            {
-                if (firstLoop)
+                Debug.Log("new thing not working");
+                if (lastTarget == targetWaypoint)
                 {
-                    lastTarget = targetWaypoint;
-                    firstLoop = false;
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    lastTarget = new Vector3();
                 }
-                targetWaypoint = player.position;
-                transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-                yield return StartCoroutine(TurnToFace(targetWaypoint));
-                targetWaypoint = lastTarget;
+                if (transform.position == targetWaypoint)
+                {
+                    targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
+                    targetWaypoint = waypoints[targetWaypointIndex];
+                    new WaitForSeconds(delay);
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    firstLoop = true;
+                }
+         
+                while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
+                {
+                    if (firstLoop)
+                    {
+                        lastTarget = targetWaypoint;
+                        firstLoop = false;
+                    }
+                    targetWaypoint = new Vector3(player.position.x, transform.position.y,  player.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    targetWaypoint = lastTarget;
+                }
+            } else {
+                while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
+                {
+                    
+                    targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+                    yield return null;
+                    targetWaypoint = waypoints[0];
+                }
             }
             yield return null;
         }
@@ -132,14 +154,10 @@ public class Guard : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (OnGuardHasCapturedPlayer != null)
-            {
-                OnGuardHasCapturedPlayer();
-                collision.gameObject.GetComponent<Movement3D>().enabled = false;
-                collision.gameObject.GetComponentInChildren<Camera>().enabled = false;
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
     private void OnDrawGizmos()
     {
         Vector3 startPosition = pathHolder.GetChild(0).position;

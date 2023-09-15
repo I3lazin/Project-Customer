@@ -7,6 +7,9 @@ TagManager:
   - collectable
   - End
   - Gateway
+  - IventoryItem
+  - Obstacles
+  - SceneChanger
   layers:
   - Default
   - TransparentFX
@@ -17,8 +20,9 @@ TagManager:
   - Terrain
   - SceneChange
   - Location1
-  - 
-  - 
+  - Player
+  - Obstacles
+  - Camera
   - 
   - 
   - 
