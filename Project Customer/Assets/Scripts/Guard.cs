@@ -73,7 +73,6 @@ public class Guard : MonoBehaviour
             {
                 if (!Physics.Linecast(transform.position, player.position, viewMask))
                 {
-                    Debug.Log("testing raycast");
                     return true;
                 }
             }
@@ -85,7 +84,7 @@ public class Guard : MonoBehaviour
     {
         transform.position = waypoints[0];
 
-        int targetWaypointIndex = 1;
+        int targetWaypointIndex = 0;
         Vector3 lastTarget = new Vector3();
         bool firstLoop = false;
         Vector3 targetWaypoint = waypoints[targetWaypointIndex];
@@ -94,30 +93,44 @@ public class Guard : MonoBehaviour
         while (true)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-            if (lastTarget == targetWaypoint)
+            if(waypoints.Length > 1)
             {
-                yield return StartCoroutine(TurnToFace(targetWaypoint));
-                lastTarget = new Vector3();
-            }
-            if (transform.position == targetWaypoint)
-            {
-                targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
-                targetWaypoint = waypoints[targetWaypointIndex];
-                new WaitForSeconds(delay);
-                yield return StartCoroutine(TurnToFace(targetWaypoint));
-                firstLoop = true;
-            }
-            while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
-            {
-                if (firstLoop)
+                Debug.Log("new thing not working");
+                if (lastTarget == targetWaypoint)
                 {
-                    lastTarget = targetWaypoint;
-                    firstLoop = false;
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    lastTarget = new Vector3();
                 }
-                targetWaypoint = player.position;
-                transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-                yield return StartCoroutine(TurnToFace(targetWaypoint));
-                targetWaypoint = lastTarget;
+                if (transform.position == targetWaypoint)
+                {
+                    targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
+                    targetWaypoint = waypoints[targetWaypointIndex];
+                    new WaitForSeconds(delay);
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    firstLoop = true;
+                }
+         
+                while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
+                {
+                    if (firstLoop)
+                    {
+                        lastTarget = targetWaypoint;
+                        firstLoop = false;
+                    }
+                    targetWaypoint = new Vector3(player.position.x, transform.position.y,  player.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    targetWaypoint = lastTarget;
+                }
+            } else {
+                while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
+                {
+                    
+                    targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+                    yield return null;
+                    targetWaypoint = waypoints[0];
+                }
             }
             yield return null;
         }
