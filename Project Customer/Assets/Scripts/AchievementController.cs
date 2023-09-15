@@ -33,7 +33,7 @@ public class AchievementController : MonoBehaviour
     void Update()
     {
         //ach1Count = interactorTest.getsAchievement;
-        Debug.Log("ach1count = " + ach1Count);
+        //Debug.Log("ach1count = " + ach1Count);
 
         hasAchieved1 = PlayerPrefs.GetInt("Achievement1");
         hasAchieved2 = PlayerPrefs.GetInt("Achievement2");

@@ -19,14 +19,14 @@ public class InteractorTest : MonoBehaviour, IInteractable
     {
         if (requiredObjectID == null)
         {
-            Debug.Log(Random.Range(0, 100));
+            //Debug.Log(Random.Range(0, 100));
             GetComponent<Renderer>().material.color = Color.green;
         } else {
             if (FindObjectOfType<GameManager>().bools[requiredObjectID] == true)
             {
                 if (nextTarget == null)
                 {
-                    Debug.Log(Random.Range(0, 100));
+                    //Debug.Log(Random.Range(0, 100));
                     GetComponent<Renderer>().material.color = Color.green;
                 } else {
                     AchievementController.ach1Count = 1;
@@ -40,7 +40,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
             }
             else
             {
-                Debug.Log("You haven't acquired the required object yet.");
+                //Debug.Log("You haven't acquired the required object yet.");
                 GetComponent<Renderer>().material.color = Color.red;
             }   
         }

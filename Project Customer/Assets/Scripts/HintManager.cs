@@ -25,7 +25,7 @@ public class HintManager : MonoBehaviour
     IEnumerator TriggerHint()
     {
         //hint.SetActive(true);
-        Debug.Log("i am started");
+        //Debug.Log("i am started");
         yield return new WaitForSeconds(1);
     }
 }

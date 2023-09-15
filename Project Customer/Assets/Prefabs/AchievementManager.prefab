@@ -50,3 +50,5 @@ MonoBehaviour:
   hasAchieved1: 0
   ach2Trigger: 1
   hasAchieved2: 0
+  ach3Trigger: 1
+  hasAchieved3: 0
