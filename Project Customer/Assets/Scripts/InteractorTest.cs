@@ -29,7 +29,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     //Debug.Log(Random.Range(0, 100));
                     GetComponent<Renderer>().material.color = Color.green;
                 } else {
-                    AchievementController.ach1Count = 1;
+                    AchievementController.achCount[5] = 1;
                     nextTarget.SetActive(true);
                     nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);

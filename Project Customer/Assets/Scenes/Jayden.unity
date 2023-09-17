@@ -727,6 +727,10 @@ MonoBehaviour:
   hasAchieved8: 0
   ach8: {fileID: 0}
   achPatch8: {fileID: 0}
+  achTrigger: 
+  hasAchieved: 
+  ach: []
+  achPatch: []
 --- !u!4 &674968424
 Transform:
   m_ObjectHideFlags: 0

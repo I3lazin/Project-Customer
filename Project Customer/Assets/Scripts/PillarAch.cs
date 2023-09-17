@@ -24,7 +24,7 @@ public class PillarAch : MonoBehaviour
 
         if (playerInSight && !hasBeenVisited)
         {
-            AchievementController.ach2Count++;
+            AchievementController.achCount[1]++;
             hasBeenVisited = true;
         } else if (playerInSight && hasBeenVisited)
         {
@@ -34,6 +34,6 @@ public class PillarAch : MonoBehaviour
             pillarText.SetActive(false);
         }
 
-        Debug.Log(AchievementController.ach2Count);
+        //Debug.Log(AchievementController.ach2Count);
     }
 }

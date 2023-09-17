@@ -23,7 +23,7 @@ public class OwlScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        player = GameObject.Find("Player25dTest").transform;
+        //player = GameObject.Find("Player25dTest").transform;
     }
 
     // Update is called once per frame

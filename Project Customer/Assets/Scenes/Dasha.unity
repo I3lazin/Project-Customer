@@ -1708,6 +1708,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eebe03a218f0084883058ebabe07934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsCanvas: {fileID: 0}
+  achCanvas: {fileID: 0}
+  achCanvas2: {fileID: 0}
+  backGround2D: {fileID: 0}
 --- !u!4 &304480534
 Transform:
   m_ObjectHideFlags: 0
@@ -5265,7 +5269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &849409752
 AudioListener:
   m_ObjectHideFlags: 0

@@ -28,10 +28,10 @@ public class SneakAchievementController : MonoBehaviour
 
         if (playerInSight && owlScript.owlHasBeenAwoken == false) 
         {
-            AchievementController.ach2Count = 1;
+            AchievementController.achCount[7] = 1;
         } else if(playerInSight && owlScript.owlHasBeenAwoken == true)
         {
-            AchievementController.ach3Count = 1;
+            AchievementController.achCount[6] = 1;
         }
     }
 }

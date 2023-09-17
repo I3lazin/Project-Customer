@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662671568306502954}
-  - component: {fileID: 1662671568306502955}
+  - component: {fileID: 6681674849843577363}
   m_Layer: 0
   m_Name: AchievementManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662671568306502955
+--- !u!114 &6681674849843577363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,10 +47,40 @@ MonoBehaviour:
   achievement: {fileID: 0}
   achActive: 0
   achCanvas: {fileID: 0}
-  achPatch1: {fileID: 0}
+  achCanvas2: {fileID: 0}
   ach1Trigger: 1
   hasAchieved1: 0
-  ach2Trigger: 1
+  ach1: {fileID: 0}
+  achPatch1: {fileID: 0}
+  ach2Trigger: 3
   hasAchieved2: 0
+  ach2: {fileID: 0}
+  achPatch2: {fileID: 0}
   ach3Trigger: 1
   hasAchieved3: 0
+  ach3: {fileID: 0}
+  achPatch3: {fileID: 0}
+  ach4Trigger: 1
+  hasAchieved4: 0
+  ach4: {fileID: 0}
+  achPatch4: {fileID: 0}
+  ach5Trigger: 1
+  hasAchieved5: 0
+  ach5: {fileID: 0}
+  achPatch5: {fileID: 0}
+  ach6Trigger: 1
+  hasAchieved6: 0
+  ach6: {fileID: 0}
+  achPatch6: {fileID: 0}
+  ach7Trigger: 1
+  hasAchieved7: 0
+  ach7: {fileID: 0}
+  achPatch7: {fileID: 0}
+  ach8Trigger: 1
+  hasAchieved8: 0
+  ach8: {fileID: 0}
+  achPatch8: {fileID: 0}
+  achTrigger: 
+  hasAchieved: 
+  ach: []
+  achPatch: []
