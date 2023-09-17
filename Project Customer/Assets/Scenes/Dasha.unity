@@ -5666,7 +5666,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6232,7 +6232,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 946851896}
-  m_RootOrder: 22
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 78.286, y: 36.386, z: -73.151}
 --- !u!1 &946851895
 GameObject:
@@ -6262,81 +6262,8 @@ Transform:
   m_LocalScale: {x: 0.28994754, y: 0.23437685, z: 0.23437685}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 937376020}
-  - {fileID: 81886504}
-  - {fileID: 1789039080}
-  - {fileID: 1922204933}
-  - {fileID: 553796067}
-  - {fileID: 910892234}
-  - {fileID: 1551407623}
-  - {fileID: 1000147907}
-  - {fileID: 1043676535}
-  - {fileID: 637133848}
-  - {fileID: 2145590325}
-  - {fileID: 1984851056}
-  - {fileID: 369212120}
-  - {fileID: 612358144}
-  - {fileID: 947272288}
-  - {fileID: 1538745093}
-  - {fileID: 870331780}
-  - {fileID: 1202415555}
-  - {fileID: 1540746565}
-  - {fileID: 736182641}
-  - {fileID: 1424538460}
-  - {fileID: 522609546}
   - {fileID: 946406847}
-  - {fileID: 1623451328}
-  - {fileID: 1609735914}
-  - {fileID: 727810355}
-  - {fileID: 698236312}
-  - {fileID: 488920407}
-  - {fileID: 420330826}
-  - {fileID: 1557906642}
-  - {fileID: 52880660}
-  - {fileID: 1881052796}
-  - {fileID: 35185012}
-  - {fileID: 108739383}
-  - {fileID: 423452383}
-  - {fileID: 7226186}
-  - {fileID: 1422525863}
-  - {fileID: 237125490}
-  - {fileID: 942944209}
-  - {fileID: 1125313626}
-  - {fileID: 746510730}
-  - {fileID: 1352456096}
-  - {fileID: 732565221}
-  - {fileID: 228344830}
-  - {fileID: 722137745}
-  - {fileID: 1963051403}
-  - {fileID: 1014193266}
-  - {fileID: 588297240}
-  - {fileID: 1154699464}
-  - {fileID: 1677023712}
-  - {fileID: 2130452486}
-  - {fileID: 1105512468}
-  - {fileID: 857900148}
-  - {fileID: 54778601}
-  - {fileID: 2052632559}
-  - {fileID: 1807953660}
-  - {fileID: 1688899428}
-  - {fileID: 2069905483}
-  - {fileID: 2138951403}
-  - {fileID: 1757211480}
-  - {fileID: 1199244756}
-  - {fileID: 2099192025}
-  - {fileID: 899960408}
-  - {fileID: 1994073703}
-  - {fileID: 1568470084}
-  - {fileID: 455764784}
-  - {fileID: 762173988}
-  - {fileID: 451296607}
-  - {fileID: 1127265303}
   - {fileID: 1708815734}
-  - {fileID: 1329533037}
-  - {fileID: 226135714}
-  - {fileID: 268880205}
-  - {fileID: 93711181}
-  - {fileID: 638658637}
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 78.286, y: 36.386, z: -73.151}
@@ -8546,42 +8473,7 @@ Transform:
   m_LocalPosition: {x: 195, y: 25.484264, z: 487}
   m_LocalScale: {x: 0.4588176, y: 0.45881748, z: 0.4588175}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2614612}
-  - {fileID: 750207975}
-  - {fileID: 1879567820}
-  - {fileID: 484202079}
-  - {fileID: 63303488}
-  - {fileID: 105596149}
-  - {fileID: 277841685}
-  - {fileID: 1736384294}
-  - {fileID: 1972244662}
-  - {fileID: 1514767204}
-  - {fileID: 1037650893}
-  - {fileID: 489810517}
-  - {fileID: 1395628289}
-  - {fileID: 1345779772}
-  - {fileID: 1377716950}
-  - {fileID: 2002198755}
-  - {fileID: 1549531173}
-  - {fileID: 2113923777}
-  - {fileID: 1357815881}
-  - {fileID: 524721215}
-  - {fileID: 595607741}
-  - {fileID: 1218225163}
-  - {fileID: 1730484316}
-  - {fileID: 2087191126}
-  - {fileID: 1499873853}
-  - {fileID: 684004057}
-  - {fileID: 506350987}
-  - {fileID: 1474946771}
-  - {fileID: 797544880}
-  - {fileID: 475353372}
-  - {fileID: 1517453196}
-  - {fileID: 38750950}
-  - {fileID: 1846258820}
-  - {fileID: 1850016908}
-  - {fileID: 1268934905}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 134
   m_LocalEulerAnglesHint: {x: 4.211, y: 37.687, z: -3.674}
@@ -10658,7 +10550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 946851896}
-  m_RootOrder: 69
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 93.04401, y: -238.681, z: -314.174}
 --- !u!1 &1718945096
 GameObject:
@@ -10689,7 +10581,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1396175862}
-  - {fileID: 424883117}
   m_Father: {fileID: 0}
   m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 93.04401, y: -238.681, z: -314.174}

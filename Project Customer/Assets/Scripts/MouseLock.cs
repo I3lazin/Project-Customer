@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseLock : MonoBehaviour
 {
+    public GameObject settingsCanvas;
 
     private void Start()
     {
@@ -13,7 +14,7 @@ public class MouseLock : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("1"))
+        if (Input.GetKeyDown("1") && !settingsCanvas.activeInHierarchy)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

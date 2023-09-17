@@ -21,6 +21,10 @@ public class Movement3D : MonoBehaviour
     //animation
     public Animator animator;
 
+    //audio
+    public AudioSource walk;
+    public AudioSource landing;
+
     private void Awake()
     {
         playerInput = GetComponent<InputHandler3D>();
@@ -31,8 +35,8 @@ public class Movement3D : MonoBehaviour
     void Update()
     {
         float maximumSpeed;
-        if (playerInput.sneakInput) { maximumSpeed = maxSpeed * stealthMultiplier; }
-        else { maximumSpeed = maxSpeed; }
+        if (playerInput.sneakInput) { maximumSpeed = maxSpeed * stealthMultiplier; animator.SetBool("IsSneaking", true); }
+        else { maximumSpeed = maxSpeed; animator.SetBool("IsSneaking", false); }
 
 
         float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
@@ -56,9 +60,17 @@ public class Movement3D : MonoBehaviour
 
         if(Mathf.Abs(playerInput.movementInput.z) > 0.01)
         {
+            if (!walk.isPlaying)
+            {
+                walk.PlayOneShot(walk.clip);
+            }
             animator.SetFloat("Speed", 1);
         } else if(Mathf.Abs(playerInput.movementInput.x) > 0.01)
         {
+            if (!walk.isPlaying)
+            {
+                walk.PlayOneShot(walk.clip);
+            }
             animator.SetFloat("Speed", 1);
         }
         else
@@ -83,6 +95,10 @@ public class Movement3D : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
             animator.SetBool("IsInAir", false);
+            if (!landing.isPlaying)
+            {
+                landing.PlayOneShot(landing.clip);
+            }
 
         }
     }

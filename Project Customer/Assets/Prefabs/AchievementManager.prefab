@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achievement: {fileID: 0}
   achActive: 0
+  achCanvas: {fileID: 0}
+  achPatch1: {fileID: 0}
   ach1Trigger: 1
   hasAchieved1: 0
   ach2Trigger: 1

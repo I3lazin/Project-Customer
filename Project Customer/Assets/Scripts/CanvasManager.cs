@@ -31,4 +31,9 @@ public class CanvasManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneID);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
