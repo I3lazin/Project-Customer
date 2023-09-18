@@ -33,7 +33,7 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(itemsInIventory[id], Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             ++i;
-            Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
+            //Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
         }
     }
 
@@ -48,10 +48,10 @@ public class DisplayInventory : MonoBehaviour
                 var obj = Instantiate(itemsInIventory[id], Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 DisplayedItems.Add(id);
-                Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
+                //Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
             }
             ++i;
-            Debug.Log(i);
+            //Debug.Log(i);
         }
     }
 
