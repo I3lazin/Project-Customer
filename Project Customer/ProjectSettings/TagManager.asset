@@ -9,6 +9,8 @@ TagManager:
   - Gateway
   - IventoryItem
   - Obstacles
+  - FirstPerson
+  - ThirdPerson
   layers:
   - Default
   - TransparentFX
