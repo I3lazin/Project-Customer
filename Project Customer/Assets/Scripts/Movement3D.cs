@@ -58,6 +58,6 @@ public class Movement3D : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.5f)));
+      /*  Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.5f)));*/
     }
 }
