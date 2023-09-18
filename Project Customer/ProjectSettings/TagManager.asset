@@ -8,6 +8,9 @@ TagManager:
   - End
   - Gateway
   - IventoryItem
+  - Obstacles
+  - FirstPerson
+  - ThirdPerson
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - Terrain
   - SceneChange
   - Location1
-  - 
-  - 
+  - Player
+  - Obstacles
   - 
   - 
   - 

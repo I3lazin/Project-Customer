@@ -22,13 +22,4 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
-    void Update()
-    {
-        foreach (var id in bools.Keys)
-        {
-            Debug.Log(bools[id]);
-        }
-    }
-
 }
