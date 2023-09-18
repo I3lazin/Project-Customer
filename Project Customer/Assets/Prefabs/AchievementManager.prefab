@@ -44,42 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ddec9d74e992548a6b6e9751e45284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievement: {fileID: 0}
-  achActive: 0
   achCanvas: {fileID: 0}
   achCanvas2: {fileID: 0}
-  ach1Trigger: 1
-  hasAchieved1: 0
-  ach1: {fileID: 0}
-  achPatch1: {fileID: 0}
-  ach2Trigger: 3
-  hasAchieved2: 0
-  ach2: {fileID: 0}
-  achPatch2: {fileID: 0}
-  ach3Trigger: 1
-  hasAchieved3: 0
-  ach3: {fileID: 0}
-  achPatch3: {fileID: 0}
-  ach4Trigger: 1
-  hasAchieved4: 0
-  ach4: {fileID: 0}
-  achPatch4: {fileID: 0}
-  ach5Trigger: 1
-  hasAchieved5: 0
-  ach5: {fileID: 0}
-  achPatch5: {fileID: 0}
-  ach6Trigger: 1
-  hasAchieved6: 0
-  ach6: {fileID: 0}
-  achPatch6: {fileID: 0}
-  ach7Trigger: 1
-  hasAchieved7: 0
-  ach7: {fileID: 0}
-  achPatch7: {fileID: 0}
-  ach8Trigger: 1
-  hasAchieved8: 0
-  ach8: {fileID: 0}
-  achPatch8: {fileID: 0}
   achTrigger: 
   hasAchieved: 
   ach: []
