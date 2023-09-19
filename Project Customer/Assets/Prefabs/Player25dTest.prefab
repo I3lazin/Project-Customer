@@ -87,6 +87,8 @@ MonoBehaviour:
   stealthMultiplier: 0
   sensitivity: 0
   animator: {fileID: 1636855075521172543}
+  walk: {fileID: 0}
+  landing: {fileID: 0}
 --- !u!114 &6005222297079335804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractorSource: {fileID: 6005222297079335800}
   InteractRange: 4
-  requiredObjectId: 
 --- !u!114 &6005222297079335805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 2.7, y: 2.38, z: -9.36}
+  m_FollowOffset: {x: 1.7130005, y: 2.38, z: -11.16}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -319,15 +320,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6005222297309722100}
-  m_LocalRotation: {x: 0.06563646, y: -0.117678046, z: 0.0077953017, w: 0.9908496}
-  m_LocalPosition: {x: 2.699997, y: 2.38, z: -9.36}
+  m_LocalRotation: {x: 0.06590164, y: 0.07692786, z: -0.005095973, w: 0.99484324}
+  m_LocalPosition: {x: 1.7129974, y: 2.38, z: -11.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6005222297204731702}
   m_Father: {fileID: 6005222297079335800}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 7.58, y: -13.546, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.58, y: 8.843, z: 0}
 --- !u!114 &6005222297309722102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,8 +401,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6005222297419945252}
-  m_LocalRotation: {x: 0.06563646, y: -0.117678046, z: 0.0077953017, w: 0.9908496}
-  m_LocalPosition: {x: 2.699997, y: 2.38, z: -9.36}
+  m_LocalRotation: {x: 0.026635766, y: 0.9132109, z: -0.060494058, w: 0.4020906}
+  m_LocalPosition: {x: 487.20795, y: 13.171, z: 264.49133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
