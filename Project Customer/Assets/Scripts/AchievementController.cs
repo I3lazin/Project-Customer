@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class AchievementController : MonoBehaviour
 {
     private bool achActive;
     public GameObject achCanvas;
     public GameObject achCanvas2;
+
+    //achievement position
+    public float startX;
+    public float endX;
+
+    //audio
+    public AudioSource achievementSound;
 
     //achievment arrays
     public static int[] achCount;
@@ -71,15 +79,19 @@ public class AchievementController : MonoBehaviour
     IEnumerator TriggerAch1()
     {
         //displaying achievemnt with the right description
+        ach[0].transform.DOMoveX(endX, 1.0f);
         achActive = true;
         hasAchieved[0] = 1;
-        ach[0].SetActive(true);
-
         PlayerPrefs.SetInt("Achievement1", hasAchieved[0]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
+
         yield return new WaitForSeconds(7);
 
         //resseting achievement
-        ach[0].SetActive(false);
+        ach[0].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -87,12 +99,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[1] = 1;
-        ach[1].SetActive(true);
+        ach[1].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement2", hasAchieved[1]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[1].SetActive(false);
+        ach[1].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -100,12 +116,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[2] = 1;
-        ach[2].SetActive(true);
+        ach[2].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement3", hasAchieved[2]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[2].SetActive(false);
+        ach[2].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -113,12 +133,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[3] = 1;
-        ach[3].SetActive(true);
+        ach[3].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement4", hasAchieved[3]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[3].SetActive(false);
+        ach[3].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -126,12 +150,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[4] = 1;
-        ach[4].SetActive(true);
+        ach[4].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement5", hasAchieved[4]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[4].SetActive(false);
+        ach[4].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -139,12 +167,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[5] = 1;
-        ach[5].SetActive(true);
+        ach[5].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement6", hasAchieved[5]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[5].SetActive(false);
+        ach[5].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -152,12 +184,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[6] = 1;
-        ach[6].SetActive(true);
+        ach[6].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement7", hasAchieved[6]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[6].SetActive(false);
+        ach[6].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 
@@ -165,12 +201,16 @@ public class AchievementController : MonoBehaviour
     {
         achActive = true;
         hasAchieved[7] = 1;
-        ach[7].SetActive(true);
+        ach[7].transform.DOMoveX(endX, 1.0f);
         PlayerPrefs.SetInt("Achievement8", hasAchieved[7]);
+        if (!achievementSound.isPlaying)
+        {
+            achievementSound.PlayOneShot(achievementSound.clip);
+        }
 
         yield return new WaitForSeconds(7);
 
-        ach[7].SetActive(false);
+        ach[7].transform.DOMoveX(startX, 1.0f);
         achActive = false;
     }
 }

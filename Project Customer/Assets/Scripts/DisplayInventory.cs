@@ -15,6 +15,8 @@ public class DisplayInventory : MonoBehaviour
     public Dictionary<string, GameObject> itemsInIventory = new Dictionary<string, GameObject>();
     public List<string> DisplayedItems = new List<string>();
 
+    [SerializeField] private AudioSource pickUp;
+
     void Start()
     {
         CreateDisplay();
@@ -44,6 +46,7 @@ public class DisplayInventory : MonoBehaviour
         {
             if(!DisplayedItems.Contains(id))
             {
+                if (!pickUp.isPlaying) { pickUp.PlayOneShot(pickUp.clip); }
                 Debug.Log("add new");
                 var obj = Instantiate(itemsInIventory[id], Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);

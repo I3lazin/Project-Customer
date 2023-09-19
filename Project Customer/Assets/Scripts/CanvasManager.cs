@@ -36,4 +36,9 @@ public class CanvasManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void DisableObj(GameObject obj)
+    {
+        obj.SetActive(false);
+    }
 }

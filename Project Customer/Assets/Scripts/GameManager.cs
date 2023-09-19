@@ -8,9 +8,12 @@ public class GameManager : MonoBehaviour
 {
     public Dictionary<string, bool> bools = new Dictionary<string, bool>();
 
+    public GameObject mainMenu;
     public GameObject settingsCanvas;
     public GameObject achCanvas;
     public GameObject achCanvas2;
+
+    public GameObject Cutscene1;
 
     public AudioSource backGround2D;
 
@@ -26,15 +29,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        backGround2D.PlayOneShot(backGround2D.clip);
+        //backGround2D.PlayOneShot(backGround2D.clip);
     }
 
     private void Update()
     {
-        if (settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy)
+        if (mainMenu.activeInHierarchy || settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy || Cutscene1.activeInHierarchy)
         {
             Cursor.lockState = CursorLockMode.None;
         }
         else { Cursor.lockState = CursorLockMode.Locked; }
+
+        if(!mainMenu.activeInHierarchy && !backGround2D.isPlaying) 
+        {
+            backGround2D.PlayOneShot(backGround2D.clip);
+        }
     }
 }
