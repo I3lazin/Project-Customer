@@ -115,8 +115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0018, y: -126.39}
-  m_SizeDelta: {x: 440.31, y: 382.39}
+  m_AnchoredPosition: {x: 12.182995, y: -149.22797}
+  m_SizeDelta: {x: 377.664, y: 336.714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5908336329038517859
 CanvasRenderer:
@@ -159,13 +159,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: coats but, increasingly, real fur trim for hooded jackets, and a range
-    of other clothing and accessories. Animals are typically killed for the fur trade
-    through a variety of methods, some of which are controversial and have raised
-    significant ethical concerns, for example gas chambers, electrocution, lethal
-    injection, trapping and hunting or using captive bolt guns. Prior to the process
-    animals are being held in confined cages with limited space to move causing muscle
-    atrophy, bone deformation, depression and many more.
+  m_Text: They're used for traditional fur coats and increasingly for real fur trim
+    on hooded jackets and pompoms for hats, gloves, shoes, and other clothing and
+    accessories. These animals are often subjected to controversial and ethically
+    concerning methods of slaughter, such as gas chambers, electrocution, lethal
+    injection, trapping, hunting, or captive bolt guns. Prior to this process, they
+    endure life in cramped cages, leading to muscle atrophy, bone deformation, depression,
+    and more.
 --- !u!1 &1876146600516814651
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,8 +622,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.5779, y: 125.029655}
-  m_SizeDelta: {x: 286.9202, y: 150.7166}
+  m_AnchoredPosition: {x: 87.737, y: 126.99}
+  m_SizeDelta: {x: 286.92, y: 96.348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9156743238103962579
 CanvasRenderer:
@@ -703,8 +703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.886375, y: 132.59537}
-  m_SizeDelta: {x: 280.5371, y: 135.5793}
+  m_AnchoredPosition: {x: 81.888, y: 126.99}
+  m_SizeDelta: {x: 280.537, y: 98.298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4592879942279435308
 CanvasRenderer:
@@ -747,8 +747,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Each year,\u202Faround one hundred million\u202Fanimals are bred and killed
-    to supply the fashion industry with not only traditional fur"
+  m_Text: 'Each year, approximately 100 million animals are bred and killed for the
+    fashion industry. '
 --- !u!1 &3574972972970989918
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,8 +784,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.5779, y: 125.029655}
-  m_SizeDelta: {x: 286.9202, y: 150.7166}
+  m_AnchoredPosition: {x: 87.737, y: 126.99}
+  m_SizeDelta: {x: 286.92, y: 103.583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5877288663409571235
 CanvasRenderer:
@@ -1025,8 +1025,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.5779, y: 125.029655}
-  m_SizeDelta: {x: 286.9202, y: 150.7166}
+  m_AnchoredPosition: {x: 87.737, y: 126.99}
+  m_SizeDelta: {x: 286.92, y: 70.084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3634293161160015028
 CanvasRenderer:
@@ -1340,8 +1340,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013809, y: -125.43}
-  m_SizeDelta: {x: 462.07, y: 350.21}
+  m_AnchoredPosition: {x: 0.766, y: -139.549}
+  m_SizeDelta: {x: 364.508, y: 321.971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4250331216650444356
 CanvasRenderer:
@@ -1384,13 +1384,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "One fascinating fact about how they protect their families is their ability
-    to form a defensive formation known as the \"elephant fortress.\" \r\nWhen a
-    threat, such as a predator or poacher, approaches an elephant herd, the adult
-    females and their calves will often gather together in a tight-knit formation.
-    They position the youngest and most vulnerable members in the center while the
-    larger and older elephants encircle them, creating a protective barrier with
-    their massive bodies and powerful tusks. \r"
+  m_Text: "They exhibit a remarkable defense strategy called the \"elephant fortress.\"
+    When facing threats like predators or poachers, the adult females and their calves
+    unite in a protective formation. The youngest and most vulnerable stay in the
+    center, shielded by the larger, older elephants who encircle them with their
+    massive bodies and powerful tusks. barrier with their massive bodies and powerful
+    tusks. \r"
 --- !u!1 &6057007468038054505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,8 +1665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013809, y: -125.43}
-  m_SizeDelta: {x: 462.07, y: 350.21}
+  m_AnchoredPosition: {x: 2.354, y: -140.98393}
+  m_SizeDelta: {x: 369.899, y: 319.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6958317567937638910
 CanvasRenderer:
@@ -1710,10 +1709,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: " Consider this: In a single teaspoon of healthy soil, there can be more
+  m_Text: ' Consider this: In a single teaspoon of healthy soil, there can be more
     microorganisms than there are people on Earth! These tiny creatures, including
     bacteria, fungi, and protozoa, play essential roles in nutrient cycling, plant
-    growth, and overall ecosystem health. \r"
+    growth, and overall ecosystem health.'
 --- !u!1 &7028159281805844864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,8 +1904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013809, y: -125.43}
-  m_SizeDelta: {x: 462.07, y: 350.21}
+  m_AnchoredPosition: {x: 4.94, y: -141.36398}
+  m_SizeDelta: {x: 376.843, y: 318.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6383980813623512445
 CanvasRenderer:
@@ -1949,13 +1948,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "One fascinating fact related to this is that otters have a unique behaviour
-    known as \"pocketing.\" When they find interesting objects or food while exploring,
-    they often tuck these items into pockets of loose skin under their forearms for
-    safekeeping. This behaviour allows them to carry their discoveries with them
-    as they continue to explore their aquatic habitats. Otters' use of pockets showcases
-    their inquisitive and resourceful nature as they navigate and investigate their
-    underwater world. \r\n\r"
+  m_Text: They exhibit a fascinating behaviour called "pocketing." When they stumble
+    upon intriguing objects or food during their explorations, they cleverly store
+    them in pockets of loose skin under their forearms. This enables them to carry
+    their finds as they continue to investigate their aquatic environments, highlighting
+    their inquisitive and resourceful traits in their underwater world.
 --- !u!1 &8593797793009285527
 GameObject:
   m_ObjectHideFlags: 0
