@@ -7,11 +7,12 @@ public class InteractorTest : MonoBehaviour, IInteractable
     [SerializeField] private GameObject removeObject;
     [SerializeField] private string requiredObjectID;
     [SerializeField] private GameObject nextTarget;
+    SoundManager sound;
     private DisplayInventory inv;
 
     private void Start()
     {
-         inv = FindObjectOfType<DisplayInventory>();
+        inv = FindObjectOfType<DisplayInventory>();
     }
 
     public void Interact()
@@ -25,20 +26,18 @@ public class InteractorTest : MonoBehaviour, IInteractable
             {
                 if (nextTarget == null)
                 {
-                    Debug.Log(Random.Range(0, 100));
-                    GetComponent<Renderer>().material.color = Color.green;
+                    Destroy(removeObject);
+                    Debug.Log("You don't have the next target set yet!");
                 } else {
                     nextTarget.SetActive(true);
-                    nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);
-/*                    inv.RemoveObject(requiredObjectID);*/
+                    /*                    inv.RemoveObject(requiredObjectID);*/
                     Destroy(removeObject);
                 }
             }
             else
             {
                 Debug.Log("You haven't acquired the required object yet.");
-                GetComponent<Renderer>().material.color = Color.red;
             }   
         }
         

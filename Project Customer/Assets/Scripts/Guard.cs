@@ -95,7 +95,6 @@ public class Guard : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
             if(waypoints.Length > 1)
             {
-                Debug.Log("new thing not working");
                 if (lastTarget == targetWaypoint)
                 {
                     yield return StartCoroutine(TurnToFace(targetWaypoint));
