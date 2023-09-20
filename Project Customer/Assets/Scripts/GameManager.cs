@@ -37,9 +37,12 @@ public class GameManager : MonoBehaviour
         }
         else { Cursor.lockState = CursorLockMode.Locked; }
 
-        if(!mainMenu.activeInHierarchy && !backGround2D.isPlaying) 
+        if((!mainMenu.activeInHierarchy || Cutscene1.activeInHierarchy) && (mainMenu.activeInHierarchy || !Cutscene1.activeInHierarchy)) 
         {
-            backGround2D.PlayOneShot(backGround2D.clip);
+            if(!backGround2D.isPlaying)
+            {
+                backGround2D.PlayOneShot(backGround2D.clip);
+            }
         }
     }
 }
