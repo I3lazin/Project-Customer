@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractorTest : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject removeObject;
+    [SerializeField] private GameObject removeHint;
     [SerializeField] private string requiredObjectID;
     [SerializeField] private GameObject nextTarget;
     SoundManager sfx;
@@ -20,7 +21,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
     {
         if (requiredObjectID == null)
         {
-            Debug.Log(Random.Range(0, 100));
+            //Debug.Log(Random.Range(0, 100));
             GetComponent<Renderer>().material.color = Color.green;
         } else {
             if (FindObjectOfType<GameManager>().bools[requiredObjectID] == true)
@@ -34,9 +35,10 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     {
                         sfx.PlaySfx("Window");
                     }
+                    AchievementController.achCount[5] = 1;
                     nextTarget.SetActive(true);
                     gameObject.SetActive(false);
-                    /*                    inv.RemoveObject(requiredObjectID);*/
+                    removeHint.SetActive(false);
                     Destroy(removeObject);
                 }
             }

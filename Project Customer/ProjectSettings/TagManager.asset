@@ -9,6 +9,7 @@ TagManager:
   - Gateway
   - IventoryItem
   - Obstacles
+  - SceneChanger
   - FirstPerson
   - ThirdPerson
   layers:
@@ -23,8 +24,8 @@ TagManager:
   - Location1
   - Player
   - Obstacles
-  - 
-  - 
+  - Camera
+  - GlowObj
   - 
   - 
   - 

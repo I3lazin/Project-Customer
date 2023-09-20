@@ -15,6 +15,8 @@ public class DisplayInventory : MonoBehaviour
     public Dictionary<string, GameObject> itemsInIventory = new Dictionary<string, GameObject>();
     public List<string> DisplayedItems = new List<string>();
 
+    [SerializeField] private AudioSource pickUp;
+
     void Start()
     {
         CreateDisplay();
@@ -48,7 +50,7 @@ public class DisplayInventory : MonoBehaviour
                 DisplayedItems.Add(id);
             }
             ++i;
-            Debug.Log(i);
+            //Debug.Log(i);
         }
     }
 

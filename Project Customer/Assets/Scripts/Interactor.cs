@@ -11,7 +11,6 @@ public class Interactor : MonoBehaviour
 {
     public Transform InteractorSource;
     public float InteractRange;
-    [SerializeField] string requiredObjectId;
 
     void Update()
     {

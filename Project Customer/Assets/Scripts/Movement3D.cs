@@ -19,6 +19,13 @@ public class Movement3D : MonoBehaviour
     private InputHandler3D playerInput;
     private Rigidbody rb;
 
+    //animation
+    public Animator animator;
+
+    //audio
+    public AudioSource walk;
+    public AudioSource landing;
+
     private void Awake()
     {
         playerInput = GetComponent<InputHandler3D>();
@@ -29,8 +36,8 @@ public class Movement3D : MonoBehaviour
     void Update()
     {
         float maximumSpeed;
-        if (playerInput.sneakInput) { maximumSpeed = maxSpeed * stealthMultiplier; }
-        else { maximumSpeed = maxSpeed; }
+        if (playerInput.sneakInput) { maximumSpeed = maxSpeed * stealthMultiplier; animator.SetBool("IsSneaking", true); }
+        else { maximumSpeed = maxSpeed; animator.SetBool("IsSneaking", false); }
 
 
         float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
@@ -45,16 +52,56 @@ public class Movement3D : MonoBehaviour
     {
         Move();
         if (jumpPressed) { Jump(); jumpPressed = false; }
+        animator.SetBool("JustJumped", Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.1f));
     }
 
     private void Move()
     {
         rb.AddRelativeForce(playerInput.movementInput * speed, ForceMode.Impulse);
+
+        if(Mathf.Abs(playerInput.movementInput.z) > 0.01)
+        {
+            if (!walk.isPlaying)
+            {
+                walk.PlayOneShot(walk.clip);
+            }
+            animator.SetFloat("Speed", 1);
+        } else if(Mathf.Abs(playerInput.movementInput.x) > 0.01)
+        {
+            if (!walk.isPlaying)
+            {
+                walk.PlayOneShot(walk.clip);
+            }
+            animator.SetFloat("Speed", 1);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
     }
 
     private void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        animator.SetBool("JustJumped", true);
+        animator.SetBool("IsJumping", true);
+        animator.SetBool("IsInAir", true);
+        animator.SetBool("JustJumped", false);
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision != null)
+        {
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsInAir", false);
+            if (!landing.isPlaying)
+            {
+                landing.PlayOneShot(landing.clip);
+            }
+
+        }
     }
     private void OnDrawGizmos()
     {
