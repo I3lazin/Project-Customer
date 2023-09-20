@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Collectable : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Collectable : MonoBehaviour
 
     public void Collect()
     {
-        hint.SetActive(true);
+        hint.transform.DOMoveX(50.0f, 2.0f);
         interactableIcon.SetActive(true);
         Destroy(gameObject);
         FindObjectOfType<GameManager>().bools[id] = true;

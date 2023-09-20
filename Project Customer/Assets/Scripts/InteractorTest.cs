@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class InteractorTest : MonoBehaviour, IInteractable
 {
@@ -33,7 +34,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     nextTarget.SetActive(true);
                     nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);
-                    removeHint.SetActive(false);
+                    removeHint.transform.DOMoveX(-750.0f, 2.0f);
 /*                    inv.RemoveObject(requiredObjectID);*/
                     Destroy(removeObject);
                 }
