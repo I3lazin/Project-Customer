@@ -79,7 +79,7 @@ Material:
     - _StencilWriteMaskMV: 42
     - _SupportDecals: 1
     - _SurfaceType: 0
-    - _Thickness: 0.0273
+    - _Thickness: 0.0044
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -93,7 +93,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 112.99962, g: 112.99962, b: 112.99962, a: 1}
+    - _Color: {r: 98.20351, g: 81.15686, b: 81.15686, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
