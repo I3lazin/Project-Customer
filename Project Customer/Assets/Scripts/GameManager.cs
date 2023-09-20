@@ -7,7 +7,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Dictionary<string, bool> bools = new Dictionary<string, bool>();
-
     private void Awake()
     {
         DontDestroyOnLoad(this);

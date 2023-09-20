@@ -7,12 +7,13 @@ public class InteractorTest : MonoBehaviour, IInteractable
     [SerializeField] private GameObject removeObject;
     [SerializeField] private string requiredObjectID;
     [SerializeField] private GameObject nextTarget;
-    SoundManager sound;
+    SoundManager sfx;
     private DisplayInventory inv;
 
     private void Start()
     {
         inv = FindObjectOfType<DisplayInventory>();
+        sfx = FindObjectOfType<SoundManager>();
     }
 
     public void Interact()
@@ -29,6 +30,10 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     Destroy(removeObject);
                     Debug.Log("You don't have the next target set yet!");
                 } else {
+                    if (removeObject.name == "Window")
+                    {
+                        sfx.PlaySfx("Window");
+                    }
                     nextTarget.SetActive(true);
                     gameObject.SetActive(false);
                     /*                    inv.RemoveObject(requiredObjectID);*/

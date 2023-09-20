@@ -14,6 +14,7 @@ public class Movement3D : MonoBehaviour
     [SerializeField] private float stealthMultiplier;
     [SerializeField] private float sensitivity;
 
+    private bool isGrounded;
     private bool jumpPressed;
     private InputHandler3D playerInput;
     private Rigidbody rb;
@@ -35,7 +36,7 @@ public class Movement3D : MonoBehaviour
         float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
         if (XZmag > maximumSpeed)
         { rb.velocity = new Vector3(rb.velocity.x / XZmag * maximumSpeed, rb.velocity.y, rb.velocity.z / XZmag * maximumSpeed); }
-        if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.5f))
+        if (playerInput.jumpInput && Physics.BoxCast(transform.position, new Vector3(1.75f, .2f, 2), -transform.up, transform.rotation, 1.1f))
         { jumpPressed = true; }
         transform.eulerAngles += playerInput.mouseInputX * sensitivity;
     }
@@ -55,9 +56,9 @@ public class Movement3D : MonoBehaviour
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
-
     private void OnDrawGizmos()
     {
-      /*  Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.5f)));*/
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(transform.position-transform.up*1.1f, new Vector3(1.75f, .2f, 2));
     }
 }

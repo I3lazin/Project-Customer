@@ -67,11 +67,12 @@ public class Guard : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < viewDistance && !playerInput.sneakInput)
         {   
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
+            Debug.DrawLine(transform.position + (spotlight.gameObject.transform.localPosition * 3.5f), player.position, Color.red);
             
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             if (angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                if (!Physics.Linecast(transform.position, player.position, viewMask))
+                if (!Physics.Linecast(transform.position + (spotlight.gameObject.transform.localPosition * 3.5f), player.position, viewMask))
                 {
                     return true;
                 }
