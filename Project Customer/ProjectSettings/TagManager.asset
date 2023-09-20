@@ -12,6 +12,8 @@ TagManager:
   - SceneChanger
   - FirstPerson
   - ThirdPerson
+  - Water
+  - Checkpoint1
   layers:
   - Default
   - TransparentFX
