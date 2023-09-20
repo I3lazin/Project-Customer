@@ -50,7 +50,6 @@ public class DisplayInventory : MonoBehaviour
                 DisplayedItems.Add(id);
             }
             ++i;
-            //Debug.Log(i);
         }
     }
 

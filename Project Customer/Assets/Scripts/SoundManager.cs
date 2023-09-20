@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class SoundManager : MonoBehaviour
     {
         for (int i = 0; i < _key.Count; ++i)
         {
-        }
             sfx.Add(_key[i], _sfx[i]);
+        }
+            
         foreach (KeyValuePair<string, AudioClip> pair in sfx)
         {
             Debug.Log(string.Format("Key: {0} ,Audio: {1}", pair.Key, pair.Value));

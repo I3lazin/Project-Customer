@@ -239,6 +239,9 @@ MonoBehaviour:
   jumpForce: 35
   stealthMultiplier: 0.5
   sensitivity: 2
+  animator: {fileID: 0}
+  walk: {fileID: 0}
+  landing: {fileID: 0}
 --- !u!114 &2848533364210999430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractorSource: {fileID: 2848533364210999431}
   InteractRange: 4
-  requiredObjectId: 
 --- !u!114 &2848533364210999429
 MonoBehaviour:
   m_ObjectHideFlags: 0

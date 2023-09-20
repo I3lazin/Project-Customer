@@ -35,7 +35,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     {
                         sfx.PlaySfx("Window");
                     }
-                    AchievementController.achCount[5] = 1;
+                    /*AchievementController.achCount[5] = 1;*/
                     nextTarget.SetActive(true);
                     gameObject.SetActive(false);
                     removeHint.SetActive(false);

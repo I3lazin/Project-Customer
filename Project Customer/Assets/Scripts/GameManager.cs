@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject settingsCanvas;
     public GameObject achCanvas;
     public GameObject achCanvas2;
-    public GameObject Cutscene1;
+/*    public GameObject Cutscene1;*/
     public AudioSource backGround2D;
 
     private void Awake()
@@ -31,18 +31,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (mainMenu.activeInHierarchy || settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy || Cutscene1.activeInHierarchy)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else { Cursor.lockState = CursorLockMode.Locked; }
-
-        if((!mainMenu.activeInHierarchy || Cutscene1.activeInHierarchy) && (mainMenu.activeInHierarchy || !Cutscene1.activeInHierarchy)) 
-        {
-            if(!backGround2D.isPlaying)
-            {
-                backGround2D.PlayOneShot(backGround2D.clip);
-            }
-        }
+                if (mainMenu.activeInHierarchy || settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy /*|| Cutscene1.activeInHierarchy*/)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else { Cursor.lockState = CursorLockMode.Locked; }
+/*
+               if ((!mainMenu.activeInHierarchy || Cutscene1.activeInHierarchy) && (mainMenu.activeInHierarchy || !Cutscene1.activeInHierarchy))
+                {
+                    if (!backGround2D.isPlaying)
+                    {
+                        backGround2D.PlayOneShot(backGround2D.clip);
+                    }
+                }*/
     }
 }

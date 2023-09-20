@@ -7,8 +7,8 @@ public class Collectable : MonoBehaviour
 {
     [SerializeField] public string id = "null";
     [SerializeField] private GameObject itemPrefabHUD;
-    [SerializeField] private GameObject interactableIcon;
-    [SerializeField] private GameObject hint;
+/*    [SerializeField] private GameObject interactableIcon;
+    [SerializeField] private GameObject hint;*/
     SoundManager sound;
     private void Start()
     {
@@ -17,8 +17,15 @@ public class Collectable : MonoBehaviour
 
     public void Collect()
     {
-        hint.SetActive(true);
-        interactableIcon.SetActive(true);
+        /*        if (hint != null)
+                {
+                    hint.SetActive(true);
+                }
+                if (interactableIcon != null)
+                {
+                    interactableIcon.SetActive(true);
+                }*/
+        Debug.Log("collect!");
         sound.PlaySfx(id);
         Destroy(gameObject);
         FindObjectOfType<GameManager>().bools[id] = true;
