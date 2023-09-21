@@ -71,17 +71,19 @@ public class Guard : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < viewDistance && !playerInput.sneakInput)
         {   
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
-            Debug.DrawLine(transform.position + (spotlight.gameObject.transform.localPosition * 3.5f), player.position, Color.red);
+            Debug.DrawLine(spotlight.gameObject.transform.position, player.position, Color.red);
             
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             if (angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                if (!Physics.Linecast(transform.position + (spotlight.gameObject.transform.localPosition * 3.5f), player.position, viewMask))
+                if (!Physics.Linecast(spotlight.gameObject.transform.position, player.position, viewMask))
                 {
+                    animator.SetBool("isMoving", true);
                     return true;
                 }
             }
         }
+        animator.SetBool("isMoving", false);
         return false;
     }
 
@@ -91,6 +93,7 @@ public class Guard : MonoBehaviour
 
         int targetWaypointIndex = 0;
         Vector3 lastTarget = new Vector3();
+        Vector3 lastOrientation = new Vector3();
         bool firstLoop = false;
         Vector3 targetWaypoint = waypoints[targetWaypointIndex];
         transform.LookAt(targetWaypoint);
@@ -128,16 +131,20 @@ public class Guard : MonoBehaviour
                 }
             } else {
                 while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
+                { 
+                    targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
+                    transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    targetWaypoint = waypoints[0];
+                }
+                if (!CanSeePlayer() && transform.position.x == targetWaypoint.x && transform.position.z == targetWaypoint.z)
                 {
-                    animator.SetBool("isWalking", true);
-
-                    if (animator.GetBool("isStanding"))
-                    {
-                        targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
-                        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-                        yield return StartCoroutine(TurnToFace(targetWaypoint));
-                        targetWaypoint = waypoints[0];
-                    }
+                    animator.SetBool("BackAtWaypoint", true);
+                    transform.rotation = new Quaternion(0,0,0,0);
+                }
+                else
+                {
+                    animator.SetBool("BackAtWaypoint", false);
                 }
             }
             yield return null;
