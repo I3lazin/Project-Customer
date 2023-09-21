@@ -7,6 +7,13 @@ using Unity.VisualScripting;
 
 public class TriggerCheck : MonoBehaviour
 {
+    private bool hasReceivedCageAchievement = false;
+    GameManager manager;
+
+    private void Start()
+    {
+        manager = FindObjectOfType<GameManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "collectable")
@@ -26,16 +33,46 @@ public class TriggerCheck : MonoBehaviour
         {
             ChangeCamera(0);
         }
-
-        void ChangeCamera(int value)
+        if (other.tag == "AchNoCage" && !hasReceivedCageAchievement)
         {
-            foreach (var obj in GetComponentsInChildren<CinemachineVirtualCamera>())
+            AchievementController.achCount[3] = 1;
+        }
+        if (other.tag == "Ach5thRoom")
+        {
+            AchievementController.achCount[0] = 1;
+            if (manager.timesCaught < 4)
             {
-                if (obj.name == "CM vcam2")
-                {
-                    obj.GetComponent<CinemachineVirtualCamera>().Priority = value;
-                }
+                Invoke("WaitForAchievement", 10);
             }
         }
     }
+
+    void WaitForAchievement()
+    {
+        AchievementController.achCount[4] = 1;
+    }
+
+    void ChangeCamera(int value)
+    {
+        foreach (var obj in GetComponentsInChildren<CinemachineVirtualCamera>())
+        {
+            if (obj.name == "CM vcam2")
+            {
+                obj.GetComponent<CinemachineVirtualCamera>().Priority = value;
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.tag == "AchCage")
+        {
+            AchievementController.achCount[2] = 1;
+            hasReceivedCageAchievement = true;
+        }
+    }
+
+
+
 }

@@ -14,6 +14,10 @@ TagManager:
   - ThirdPerson
   - Water
   - Checkpoint1
+  - AchCage
+  - AchNoCage
+  - Ach5thRoom
+  - Vents
   layers:
   - Default
   - TransparentFX
@@ -28,7 +32,7 @@ TagManager:
   - Obstacles
   - Camera
   - GlowObj
-  - 
+  - Vents
   - 
   - 
   - 

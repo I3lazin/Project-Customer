@@ -28,6 +28,10 @@ public class InteractorTest : MonoBehaviour, IInteractable
             {
                 if (nextTarget == null)
                 {
+                    if (removeHint != null)
+                    {
+                        removeHint.SetActive(false);
+                    }
                     Destroy(removeObject);
                     Debug.Log("You don't have the next target set yet!");
                 } else {

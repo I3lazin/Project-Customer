@@ -13,6 +13,7 @@ public class Movement3D1 : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float stealthMultiplier;
     [SerializeField] private float sensitivity;
+    [SerializeField] SoundManager sfx;
 
     private bool jumpPressed;
     private InputHandler3D playerInput;
@@ -22,8 +23,9 @@ public class Movement3D1 : MonoBehaviour
     public Animator animator;
 
     //audio
-    public AudioSource walk;
+/*    public AudioSource walk;*/
     public AudioSource landing;
+
 
     private void Awake()
     {
@@ -61,9 +63,15 @@ public class Movement3D1 : MonoBehaviour
 
         if(Mathf.Abs(playerInput.movementInput.z) > 0.01 || Mathf.Abs(playerInput.movementInput.x) > 0.01)
         {
-            if (!walk.isPlaying)
+            if (!sfx.src.isPlaying)
             {
-                walk.PlayOneShot(walk.clip);
+                if (!Physics.Linecast(transform.position, transform.TransformDirection(Vector3.down), 13)) {
+                    sfx.PlaySfx("Vents");
+                    Debug.Log("Vents");
+                } else {
+                    sfx.PlaySfx("Floor");
+                    Debug.Log("Floor");
+                }
             }
             animator.SetFloat("Speed", 1);
         } 

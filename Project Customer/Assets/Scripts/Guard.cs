@@ -25,9 +25,11 @@ public class Guard : MonoBehaviour
     Transform player;
     Color originalSpotlightColor;
     private InputHandler3D playerInput;
+    private GameManager manager;
 
     void Start()
     {
+        manager = GetComponent<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         viewAngle = spotlight.spotAngle;
         originalSpotlightColor = spotlight.color;
@@ -128,7 +130,7 @@ public class Guard : MonoBehaviour
                     
                     targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
                     transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-                    yield return null;
+                    yield return StartCoroutine(TurnToFace(targetWaypoint));
                     targetWaypoint = waypoints[0];
                 }
             }
@@ -154,6 +156,7 @@ public class Guard : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            ++manager.timesCaught;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
