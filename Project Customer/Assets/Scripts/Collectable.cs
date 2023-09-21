@@ -17,5 +17,6 @@ public class Collectable : MonoBehaviour
         Destroy(gameObject);
         FindObjectOfType<GameManager>().bools[id] = true;
         FindObjectOfType<DisplayInventory>().itemsInIventory.Add(id, itemPrefabHUD);
+
     }
 }

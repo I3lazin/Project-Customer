@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject Cutscene1;
 
+    public GameObject Cutscene2;
+    public GameObject Cutscene3;
+    public GameObject Credits;
     public AudioSource backGround2D;
 
     private void Awake()
