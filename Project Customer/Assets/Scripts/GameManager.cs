@@ -7,14 +7,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Dictionary<string, bool> bools = new Dictionary<string, bool>();
-    /* public GameObject mainMenu;*/
+
+    public GameObject mainMenu;
     public GameObject settingsCanvas;
     public GameObject achCanvas;
     public GameObject achCanvas2;
-    public GameObject Cutscene2;
-    public GameObject Cutscene3;
+
+    public GameObject Cutscene1;
+
     public AudioSource backGround2D;
-    public int timesCaught = 0;
 
     private void Awake()
     {
@@ -33,18 +34,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-                if (/*mainMenu.activeInHierarchy ||*/ settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy || Cutscene2.activeInHierarchy || Cutscene3.activeInHierarchy)
-                {
-                    Cursor.lockState = CursorLockMode.None;
-                }
-                else { Cursor.lockState = CursorLockMode.Locked; }
-/*
-               if ((!mainMenu.activeInHierarchy || Cutscene1.activeInHierarchy) && (mainMenu.activeInHierarchy || !Cutscene1.activeInHierarchy))
-                {
-                    if (!backGround2D.isPlaying)
-                    {
-                        backGround2D.PlayOneShot(backGround2D.clip);
-                    }
-                }*/
+        if (mainMenu.activeInHierarchy || settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy || Cutscene1.activeInHierarchy)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else { Cursor.lockState = CursorLockMode.Locked; }
+
+        if((!mainMenu.activeInHierarchy || Cutscene1.activeInHierarchy) && (mainMenu.activeInHierarchy || !Cutscene1.activeInHierarchy)) 
+        {
+            if(!backGround2D.isPlaying)
+            {
+                backGround2D.PlayOneShot(backGround2D.clip);
+            }
+        }
     }
 }

@@ -14,7 +14,6 @@ public class Movement3D : MonoBehaviour
     [SerializeField] private float stealthMultiplier;
     [SerializeField] private float sensitivity;
 
-    private bool isGrounded;
     private bool jumpPressed;
     private InputHandler3D playerInput;
     private Rigidbody rb;
@@ -39,10 +38,11 @@ public class Movement3D : MonoBehaviour
         if (playerInput.sneakInput) { maximumSpeed = maxSpeed * stealthMultiplier; animator.SetBool("IsSneaking", true); }
         else { maximumSpeed = maxSpeed; animator.SetBool("IsSneaking", false); }
 
+
         float XZmag = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
         if (XZmag > maximumSpeed)
         { rb.velocity = new Vector3(rb.velocity.x / XZmag * maximumSpeed, rb.velocity.y, rb.velocity.z / XZmag * maximumSpeed); }
-        if (playerInput.jumpInput && Physics.BoxCast(transform.position, new Vector3(1.75f, .2f, 2), -transform.up, transform.rotation, 1.1f))
+        if (playerInput.jumpInput && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1.5f))
         { jumpPressed = true; }
         transform.eulerAngles += playerInput.mouseInputX * sensitivity;
     }
@@ -58,14 +58,21 @@ public class Movement3D : MonoBehaviour
     {
         rb.AddRelativeForce(playerInput.movementInput * speed, ForceMode.Impulse);
 
-        if(Mathf.Abs(playerInput.movementInput.z) > 0.01 || Mathf.Abs(playerInput.movementInput.x) > 0.01)
+        if(Mathf.Abs(playerInput.movementInput.z) > 0.01)
         {
             if (!walk.isPlaying)
             {
                 walk.PlayOneShot(walk.clip);
             }
             animator.SetFloat("Speed", 1);
-        } 
+        } else if(Mathf.Abs(playerInput.movementInput.x) > 0.01)
+        {
+            if (!walk.isPlaying)
+            {
+                walk.PlayOneShot(walk.clip);
+            }
+            animator.SetFloat("Speed", 1);
+        }
         else
         {
             animator.SetFloat("Speed", 0);
@@ -95,9 +102,9 @@ public class Movement3D : MonoBehaviour
 
         }
     }
+
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawCube(transform.position-transform.up*1.1f, new Vector3(1.75f, .2f, 2));
+      /*  Gizmos.DrawLine(transform.position, (transform.position + (Vector3.down * 1.5f)));*/
     }
 }

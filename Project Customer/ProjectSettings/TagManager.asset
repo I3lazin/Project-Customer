@@ -14,12 +14,6 @@ TagManager:
   - ThirdPerson
   - Water
   - Checkpoint1
-  - AchCage
-  - AchNoCage
-  - Ach5thRoom
-  - Vents
-  - Cutscene2
-  - Cutscene3
   - Checkpoint2
   - Checkpoint3
   layers:
@@ -36,7 +30,7 @@ TagManager:
   - Obstacles
   - Camera
   - GlowObj
-  - Vents
+  - 
   - 
   - 
   - 
