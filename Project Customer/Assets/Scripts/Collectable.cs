@@ -12,7 +12,7 @@ public class Collectable : MonoBehaviour
 
     public void Collect()
     {
-        hint.transform.DOMoveX(50.0f, 2.0f);
+        hint.SetActive(true);
         interactableIcon.SetActive(true);
         Destroy(gameObject);
         FindObjectOfType<GameManager>().bools[id] = true;

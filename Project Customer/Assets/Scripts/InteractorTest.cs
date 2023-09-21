@@ -34,7 +34,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     nextTarget.SetActive(true);
                     nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);
-                    removeHint.transform.DOMoveX(-750.0f, 2.0f);
+                    removeHint.SetActive(false);
 /*                    inv.RemoveObject(requiredObjectID);*/
                     Destroy(removeObject);
                 }

@@ -6,12 +6,12 @@ using UnityEngine;
 public class InteractorText : MonoBehaviour
 {
     [SerializeField] private int distance;
-    GameObject player;
+    public GameObject player;
     public bool iAmActive = true;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
