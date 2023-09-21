@@ -27,23 +27,17 @@ public class InteractorTest : MonoBehaviour, IInteractable
             {
                 if (nextTarget == null)
                 {
-                    if (removeHint != null)
-                    {
-                        removeHint.SetActive(false);
-                    }
-                    inv.RemoveObject(requiredObjectID);
-                    Destroy(removeObject);
-                    Debug.Log("You don't have the next target set yet!");
+                    //Debug.Log(Random.Range(0, 100));
+                    GetComponent<Renderer>().material.color = Color.green;
                 } else {
                     AchievementController.achCount[5] = 1;
                     nextTarget.SetActive(true);
                     nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);
                     removeHint.SetActive(false);
-                    inv.RemoveObject(requiredObjectID);
+/*                    inv.RemoveObject(requiredObjectID);*/
                     Destroy(removeObject);
                 }
-                
             }
             else
             {

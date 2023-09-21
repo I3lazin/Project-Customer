@@ -25,11 +25,9 @@ public class Guard : MonoBehaviour
     Transform player;
     Color originalSpotlightColor;
     private InputHandler3D playerInput;
-    Animator animator;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         viewAngle = spotlight.spotAngle;
         originalSpotlightColor = spotlight.color;
@@ -136,6 +134,7 @@ public class Guard : MonoBehaviour
             }
             yield return null;
         }
+
     }
 
     IEnumerator TurnToFace(Vector3 lookTarget)
@@ -153,7 +152,6 @@ public class Guard : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag + " Testing");
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -176,8 +174,4 @@ public class Guard : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, transform.forward * viewDistance);
     }
-
-
-
-
 }
