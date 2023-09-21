@@ -26,9 +26,11 @@ public class Guard : MonoBehaviour
     Color originalSpotlightColor;
     private InputHandler3D playerInput;
     private GameManager manager;
+    Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         manager = GetComponent<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         viewAngle = spotlight.spotAngle;
@@ -127,11 +129,15 @@ public class Guard : MonoBehaviour
             } else {
                 while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
                 {
-                    
-                    targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
-                    transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-                    yield return StartCoroutine(TurnToFace(targetWaypoint));
-                    targetWaypoint = waypoints[0];
+                    animator.SetBool("isWalking", true);
+
+                    if (animator.GetBool("isStanding"))
+                    {
+                        targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+                        yield return StartCoroutine(TurnToFace(targetWaypoint));
+                        targetWaypoint = waypoints[0];
+                    }
                 }
             }
             yield return null;
