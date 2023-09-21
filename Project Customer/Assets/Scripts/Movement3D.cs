@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(InputHandler3D))]
@@ -92,7 +92,6 @@ public class Movement3D : MonoBehaviour
             {
                 landing.PlayOneShot(landing.clip);
             }
-
         }
     }
     private void OnDrawGizmos()

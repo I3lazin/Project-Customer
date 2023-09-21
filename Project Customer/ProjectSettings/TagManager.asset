@@ -20,6 +20,7 @@ TagManager:
   - Vents
   - Cutscene2
   - Cutscene3
+  - Guard
   layers:
   - Default
   - TransparentFX

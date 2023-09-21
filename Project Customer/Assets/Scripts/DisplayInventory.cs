@@ -56,13 +56,18 @@ public class DisplayInventory : MonoBehaviour
     public void RemoveObject(string id)
     {
         GameObject target;
-        foreach (var obj in GameObject.FindGameObjectsWithTag("InventoryItem"))
+/*        foreach (var obj in GameObject.FindGameObjectsWithTag("InventoryItem"))
         {
             target = obj;
             DestroyImmediate(target, true);
-        }
+        }*/
         itemsInIventory.Remove(id);
         DisplayedItems.Remove(id);
+        if (transform.childCount > 0)
+        {
+            Debug.Log(transform.GetChild(0));
+            Destroy(transform.GetChild(0).gameObject);
+        }
     }
 
     public Vector3 GetPosition(int i)

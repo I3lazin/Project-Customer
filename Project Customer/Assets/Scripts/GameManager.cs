@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject achCanvas2;
     public GameObject Cutscene2;
     public GameObject Cutscene3;
+    public GameObject Credits;
     public AudioSource backGround2D;
     public int timesCaught = 0;
 
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-                if (/*mainMenu.activeInHierarchy ||*/ settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy || Cutscene2.activeInHierarchy || Cutscene3.activeInHierarchy)
+                if (/*mainMenu.activeInHierarchy ||*/ settingsCanvas.activeInHierarchy || achCanvas.activeInHierarchy || achCanvas2.activeInHierarchy || Cutscene2.activeInHierarchy || Cutscene3.activeInHierarchy || Credits.activeInHierarchy)
                 {
                     Cursor.lockState = CursorLockMode.None;
                 }

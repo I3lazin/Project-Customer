@@ -32,6 +32,7 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     {
                         removeHint.SetActive(false);
                     }
+                    inv.RemoveObject(requiredObjectID);
                     Destroy(removeObject);
                     Debug.Log("You don't have the next target set yet!");
                 } else {
@@ -43,8 +44,10 @@ public class InteractorTest : MonoBehaviour, IInteractable
                     nextTarget.SetActive(true);
                     gameObject.SetActive(false);
                     removeHint.SetActive(false);
+                    inv.RemoveObject(requiredObjectID);
                     Destroy(removeObject);
                 }
+                
             }
             else
             {
