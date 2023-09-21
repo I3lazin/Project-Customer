@@ -18,6 +18,8 @@ TagManager:
   - AchNoCage
   - Ach5thRoom
   - Vents
+  - Cutscene2
+  - Cutscene3
   layers:
   - Default
   - TransparentFX

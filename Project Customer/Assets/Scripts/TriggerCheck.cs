@@ -7,6 +7,9 @@ using Unity.VisualScripting;
 
 public class TriggerCheck : MonoBehaviour
 {
+    [SerializeField] private GameObject Cutscene2Canvas;
+    [SerializeField] private GameObject Cutscene3Canvas;
+
     private bool hasReceivedCageAchievement = false;
     GameManager manager;
 
@@ -45,6 +48,18 @@ public class TriggerCheck : MonoBehaviour
                 Invoke("WaitForAchievement", 10);
             }
         }
+        if (other.tag == "Cutscene2")
+        {
+            Cutscene2Canvas.SetActive(true);
+            GetComponent<Movement3D>().enabled = false;
+        }
+        if (other.tag == "Cutscene3")
+        {
+            Cutscene3Canvas.SetActive(true);
+            GetComponent<Movement3D>().enabled = false;
+        }
+
+
     }
 
     void WaitForAchievement()
