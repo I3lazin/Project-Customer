@@ -121,6 +121,6 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Server: 0
-    Standalone: 0
-    WebGL: 0
+    Server: 2
+    Standalone: 2
+    WebGL: 2
