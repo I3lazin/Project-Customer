@@ -22,6 +22,11 @@ public class CanvasManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void EnableMovement(Movement3D movement)
+    {
+        movement.enabled = true;
+    }
+
     public void EnableCanvas(GameObject obj)
     {
         obj.SetActive(true);
@@ -30,5 +35,15 @@ public class CanvasManager : MonoBehaviour
     public void MoveToScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void DisableObj(GameObject obj)
+    {
+        obj.SetActive(false);
     }
 }

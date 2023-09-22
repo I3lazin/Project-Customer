@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.Build;
 using UnityEngine;
 
 public class DisplayInventory : MonoBehaviour
@@ -14,6 +13,8 @@ public class DisplayInventory : MonoBehaviour
     public int Y_START;
     public Dictionary<string, GameObject> itemsInIventory = new Dictionary<string, GameObject>();
     public List<string> DisplayedItems = new List<string>();
+
+    [SerializeField] private AudioSource pickUp;
 
     void Start()
     {
@@ -33,7 +34,6 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(itemsInIventory[id], Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             ++i;
-            Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
         }
     }
 
@@ -44,27 +44,29 @@ public class DisplayInventory : MonoBehaviour
         {
             if(!DisplayedItems.Contains(id))
             {
-                Debug.Log("add new");
                 var obj = Instantiate(itemsInIventory[id], Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 DisplayedItems.Add(id);
-                Debug.Log(string.Format("Key: {0}, Value {1}", id, itemsInIventory[id]));
             }
             ++i;
-            Debug.Log(i);
         }
     }
 
     public void RemoveObject(string id)
     {
         GameObject target;
-        foreach (var obj in GameObject.FindGameObjectsWithTag("InventoryItem"))
+/*        foreach (var obj in GameObject.FindGameObjectsWithTag("InventoryItem"))
         {
             target = obj;
             DestroyImmediate(target, true);
-        }
+        }*/
         itemsInIventory.Remove(id);
         DisplayedItems.Remove(id);
+        if (transform.childCount > 0)
+        {
+            Debug.Log(transform.GetChild(0));
+            Destroy(transform.GetChild(0).gameObject);
+        }
     }
 
     public Vector3 GetPosition(int i)

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662671568306502954}
-  - component: {fileID: 1662671568306502955}
+  - component: {fileID: 6681674849843577363}
   m_Layer: 0
   m_Name: AchievementManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662671568306502955
+--- !u!114 &6681674849843577363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,11 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ddec9d74e992548a6b6e9751e45284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievement: {fileID: 0}
-  achActive: 0
-  ach1Trigger: 1
-  hasAchieved1: 0
-  ach2Trigger: 1
-  hasAchieved2: 0
-  ach3Trigger: 1
-  hasAchieved3: 0
+  achCanvas: {fileID: 0}
+  achCanvas2: {fileID: 0}
+  achTrigger: 
+  hasAchieved: 
+  ach: []
+  achPatch: []
