@@ -2231,12 +2231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eebe03a218f0084883058ebabe07934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1676046286}
   settingsCanvas: {fileID: 1783114910}
   achCanvas: {fileID: 127553067}
   achCanvas2: {fileID: 161876243}
-  Cutscene1: {fileID: 6673264781775236315}
+  Cutscene2: {fileID: 0}
+  Cutscene3: {fileID: 0}
+  Credits: {fileID: 0}
   backGround2D: {fileID: 304480535}
+  timesCaught: 0
 --- !u!4 &304480534
 Transform:
   m_ObjectHideFlags: 0
@@ -2743,7 +2745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773a280e1a5cbda4c843a78796b34e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSound: {fileID: 320832576}
+  sceneSound:
+  - {fileID: 0}
 --- !u!1 &356149856
 GameObject:
   m_ObjectHideFlags: 0
@@ -9436,7 +9439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773a280e1a5cbda4c843a78796b34e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSound: {fileID: 1074684345}
+  sceneSound:
+  - {fileID: 0}
 --- !u!1 &1079297810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5879839226931284579, guid: 5b15214f36a293449b98e4868aeeb64c,
@@ -15624,8 +15628,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsCanvas: {fileID: 1783114910}
   mainCanvas: {fileID: 519326328049199}
-  player: {fileID: 581117483}
-  pauseCamera: {fileID: 845439858}
 --- !u!114 &1720684000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15642,7 +15644,7 @@ MonoBehaviour:
   checkPoint1: {fileID: 1500297532}
   checkPoint2: {fileID: 1258112330}
   checkPoint3: {fileID: 1340872784}
-  waterHint: {fileID: 1701922609}
+  checkPoint4: {fileID: 0}
 --- !u!4 &1722488140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6005222297419945255, guid: 3cbc72a963237c94296d2d3fc417fafc,
