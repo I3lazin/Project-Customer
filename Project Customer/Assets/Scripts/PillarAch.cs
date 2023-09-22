@@ -26,6 +26,7 @@ public class PillarAch : MonoBehaviour
         {
             AchievementController.achCount[1]++;
             hasBeenVisited = true;
+            Debug.Log(AchievementController.achCount[1]);
         } else if (playerInSight && hasBeenVisited)
         {
             pillarText.SetActive(true);

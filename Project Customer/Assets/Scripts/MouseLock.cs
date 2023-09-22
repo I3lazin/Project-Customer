@@ -19,7 +19,7 @@ public class MouseLock : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        if (Input.GetKeyDown("2") || settingsCanvas.activeInHierarchy)
+        if (Input.GetKeyDown("2"))
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
