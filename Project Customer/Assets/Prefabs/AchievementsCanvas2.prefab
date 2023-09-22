@@ -115,8 +115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.97, y: -145.25558}
-  m_SizeDelta: {x: 371.496, y: 337.754}
+  m_AnchoredPosition: {x: 2.0018, y: -126.39}
+  m_SizeDelta: {x: 440.31, y: 382.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5908336329038517859
 CanvasRenderer:
@@ -159,10 +159,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Their silent movements, snowshoe-like paws, and camouflaged fur make them
-    nearly invisible in their snowy terrain, allowing them to stalk prey and navigate
-    rocky landscapes without detection. This natural stealth is a key survival strategy
-    for these elusive big cats.
+  m_Text: "snowshoe-like paws, and camouflaged fur make them nearly invisible in
+    their snowy terrain, allowing them to stalk prey and navigate rocky landscapes
+    without detection. This natural stealth is a key survival strategy for these
+    elusive big cats. \r"
 --- !u!1 &1876146600516814651
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.576, y: 126.99}
-  m_SizeDelta: {x: 286.92, y: 120.432}
+  m_AnchoredPosition: {x: 87.5779, y: 125.029655}
+  m_SizeDelta: {x: 286.9202, y: 150.7166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9156743238103962579
 CanvasRenderer:
@@ -663,8 +663,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Chameleons are camouflage experts, adept at changing skin color to blend
-    with surroundings for both hunting and avoiding predators.
+  m_Text: "Chameleons are experts at camouflage. They can change their skin colour
+    to match their surroundings, making it difficult for predators to spot them.
+    This camouflage helps them both when hunting for prey and when evading potential
+    threats. But did you also know that chameleons use colour changes for communication
+    with other chameleons? They may display bright colours to signal aggression or
+    dominance, or they may use subdued colours to show submission. These colour changes
+    play a crucial role in social interactions and preventing conflicts within their
+    own species. \r\n\r\n"
 --- !u!1 &3307836806889288742
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.1008, y: 125.199554}
-  m_SizeDelta: {x: 280.537, y: 72.007}
+  m_AnchoredPosition: {x: 81.886375, y: 132.59537}
+  m_SizeDelta: {x: 280.5371, y: 135.5793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4592879942279435308
 CanvasRenderer:
@@ -745,7 +751,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Snow leopards are renowned for their remarkable stealth in the mountains.
-    \n"
+    Their silent movements, snowshoe-like paws, and camouflaged fur make them nearly
+    invisible in their snowy terrain, allowing them to stalk prey and navigate rocky
+    landscapes without detection. This natural stealth is a key survival strategy
+    for these elusive big cats. \r\n"
 --- !u!1 &3574972972970989918
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,8 +790,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.574, y: 126.99}
-  m_SizeDelta: {x: 286.92, y: 95.175}
+  m_AnchoredPosition: {x: 87.5779, y: 125.029655}
+  m_SizeDelta: {x: 286.9202, y: 150.7166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5877288663409571235
 CanvasRenderer:
@@ -825,8 +834,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Beaver felt, made from the dense underfur of beavers, was prized for its
-    remarkable warmth and durability.
+  m_Text: "Beaver felt, crafted from the dense underfur of beavers, was prized for
+    its exceptional warmth and durability. Highly sought after during the fur trade
+    era, this fur was transformed into durable felt, primarily used in making fashionable
+    hats in Europe, known as \"beaver hats.\" These hats, symbols of sophistication,
+    enjoyed popularity in the 17th and 18th centuries. They drove the demand for
+    beaver pelts, prompting extensive trapping in North America. However, the decline
+    in beaver hat fashion in the mid-19th century contributed to changes in the fur
+    trade industry, highlighting the historical significance of beaver fur in the
+    global fashion arena of its time. \r\n\r\n"
 --- !u!1 &4690707583920585349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,8 +1034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.737, y: 126.99}
-  m_SizeDelta: {x: 286.92, y: 84.995}
+  m_AnchoredPosition: {x: 87.5779, y: 125.029655}
+  m_SizeDelta: {x: 286.9202, y: 150.7166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3634293161160015028
 CanvasRenderer:
@@ -1063,7 +1079,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Ferrets are light sleepers, often waking up quickly when their environment
-    changes. \n\r\n"
+    changes. Their sleep patterns include frequent, brief awakenings, which help
+    them stay alert and responsive to their surroundings. This adaptability is rooted
+    in their instincts as hunters and explorers, making them ready to react swiftly
+    to any potential threats or opportunities, even in domestic settings. \r\n\r\n"
 --- !u!1 &5010373804981074017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,8 +1350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.024, y: -141.338}
-  m_SizeDelta: {x: 378.034, y: 318.393}
+  m_AnchoredPosition: {x: -0.0013809, y: -125.43}
+  m_SizeDelta: {x: 462.07, y: 350.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4250331216650444356
 CanvasRenderer:
@@ -1375,10 +1394,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Their sleep patterns include frequent, brief awakenings, which help them
-    stay alert and responsive to their surroundings. This adaptability is rooted
-    in their instincts as hunters and explorers, making them ready to react swiftly
-    to any potential threats or opportunities, even in domestic settings.
+  m_Text: "brief awakenings, which help them stay alert and responsive to their surroundings.
+    This adaptability is rooted in their instincts as hunters and explorers, making
+    them ready to react swiftly to any potential threats or opportunities, even in
+    domestic settings. \r"
 --- !u!1 &6057007468038054505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,8 +1673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.545, y: -140.119}
-  m_SizeDelta: {x: 384.957, y: 320.833}
+  m_AnchoredPosition: {x: -0.0013809, y: -125.43}
+  m_SizeDelta: {x: 462.07, y: 350.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6958317567937638910
 CanvasRenderer:
@@ -1698,13 +1717,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: It was highly coveted during the fur trade era and transformed into sturdy
-    felt, mainly for crafting fashionable European hats known as "beaver hats." These
-    hats symbolized sophistication and were in vogue during the 17th and 18th centuries,
-    driving demand for beaver pelts and extensive trapping in North America. However,
-    the decline in beaver hat fashion in the mid-19th century reshaped the fur trade
-    industry, marking the historical significance of beaver fur in the global fashion
-    scene of its time.
+  m_Text: "after during the fur trade era, this fur was transformed into durable
+    felt, primarily used in making fashionable hats in Europe, known as \"beaver
+    hats.\" These hats, symbols of sophistication, enjoyed popularity in the 17th
+    and 18th centuries. They drove the demand for beaver pelts, prompting extensive
+    trapping in North America. However, the decline in beaver hat fashion in the
+    mid-19th century contributed to changes in the fur trade industry, highlighting
+    the historical significance of beaver fur in the global fashion arena of its
+    time. \r"
 --- !u!1 &7028159281805844864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,7 +1760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123.82254, y: 125.20309}
+  m_AnchoredPosition: {x: -129.03516, y: 126.99353}
   m_SizeDelta: {x: 462, y: 301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1191494506824601728
@@ -1896,8 +1916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.879, y: -141.114}
-  m_SizeDelta: {x: 373.494, y: 318.841}
+  m_AnchoredPosition: {x: 4.1826, y: -125.43}
+  m_SizeDelta: {x: 453.702, y: 350.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6383980813623512445
 CanvasRenderer:
@@ -1940,10 +1960,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Interestingly, they also employ color changes for communication among themselves,
-    signalling aggression or dominance with bright colors and submission with subdued
-    ones. These color shifts are vital for social interactions and conflict prevention
-    within their species.
+  m_Text: "predators to spot them. This camouflage helps them both when hunting for
+    prey and when evading potential threats. But did you also know that chameleons
+    use colour changes for communication with other chameleons? They may display
+    bright colours to signal aggression or dominance, or they may use subdued colours
+    to show submission. These colour changes play a crucial role in social interactions
+    and preventing conflicts within their own species. \r"
 --- !u!1 &8593797793009285527
 GameObject:
   m_ObjectHideFlags: 0

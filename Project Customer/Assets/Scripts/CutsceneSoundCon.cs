@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class CutsceneSoundCon : MonoBehaviour
 {
-    [SerializeField] private List<AudioSource> sceneSound = new List<AudioSource>();
+    [SerializeField] private AudioSource sceneSound;
 
     void Awake()
     {
-        foreach (var sound in sceneSound)
-        sound.PlayOneShot(sound.clip);
+        sceneSound.PlayOneShot(sceneSound.clip);
     }
 }
