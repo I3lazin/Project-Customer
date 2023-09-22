@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
+using DG.Tweening;
 
 public class OwlScript : MonoBehaviour
 {
@@ -62,5 +63,14 @@ public class OwlScript : MonoBehaviour
     private void OwlHint(bool setOwlHintActive)
     {
         owlHint.SetActive(setOwlHintActive);
+
+        if(setOwlHintActive )
+        {
+            owlHint.transform.DOMoveX(50.0f, 2.0f);
+        }
+        else
+        {
+            owlHint.transform.DOMoveX(-750.0f, 2.0f);
+        }
     }
 }

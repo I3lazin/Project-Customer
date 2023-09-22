@@ -25,11 +25,9 @@ public class Guard : MonoBehaviour
     Transform player;
     Color originalSpotlightColor;
     private InputHandler3D playerInput;
-    Animator animator;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         viewAngle = spotlight.spotAngle;
         originalSpotlightColor = spotlight.color;
@@ -69,19 +67,16 @@ public class Guard : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < viewDistance && !playerInput.sneakInput)
         {   
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
-            Debug.DrawLine(spotlight.gameObject.transform.position, player.position, Color.red);
             
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             if (angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                if (!Physics.Linecast(spotlight.gameObject.transform.position, player.position, viewMask))
+                if (!Physics.Linecast(transform.position, player.position, viewMask))
                 {
-                    animator.SetBool("isMoving", true);
                     return true;
                 }
             }
         }
-        animator.SetBool("isMoving", false);
         return false;
     }
 
@@ -91,7 +86,6 @@ public class Guard : MonoBehaviour
 
         int targetWaypointIndex = 0;
         Vector3 lastTarget = new Vector3();
-        Vector3 lastOrientation = new Vector3();
         bool firstLoop = false;
         Vector3 targetWaypoint = waypoints[targetWaypointIndex];
         transform.LookAt(targetWaypoint);
@@ -101,6 +95,7 @@ public class Guard : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
             if(waypoints.Length > 1)
             {
+                Debug.Log("new thing not working");
                 if (lastTarget == targetWaypoint)
                 {
                     yield return StartCoroutine(TurnToFace(targetWaypoint));
@@ -129,24 +124,17 @@ public class Guard : MonoBehaviour
                 }
             } else {
                 while (CanSeePlayer() && playerVisibleTimer >= timeToSpotPlayer && player.gameObject.GetComponent<Movement3D>().enabled == true)
-                { 
+                {
+                    
                     targetWaypoint = new Vector3(player.position.x, transform.position.y, player.position.z);
                     transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
-                    yield return StartCoroutine(TurnToFace(targetWaypoint));
+                    yield return null;
                     targetWaypoint = waypoints[0];
-                }
-                if (!CanSeePlayer() && transform.position.x == targetWaypoint.x && transform.position.z == targetWaypoint.z)
-                {
-                    animator.SetBool("BackAtWaypoint", true);
-                    transform.rotation = new Quaternion(0,0,0,0);
-                }
-                else
-                {
-                    animator.SetBool("BackAtWaypoint", false);
                 }
             }
             yield return null;
         }
+
     }
 
     IEnumerator TurnToFace(Vector3 lookTarget)
@@ -164,7 +152,6 @@ public class Guard : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag + " Testing");
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -187,8 +174,4 @@ public class Guard : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, transform.forward * viewDistance);
     }
-
-
-
-
 }
