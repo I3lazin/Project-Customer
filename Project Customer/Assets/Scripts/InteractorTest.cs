@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 public class InteractorTest : MonoBehaviour, IInteractable
 {
@@ -9,11 +8,13 @@ public class InteractorTest : MonoBehaviour, IInteractable
     [SerializeField] private GameObject removeHint;
     [SerializeField] private string requiredObjectID;
     [SerializeField] private GameObject nextTarget;
+    SoundManager sfx;
     private DisplayInventory inv;
 
     private void Start()
     {
-         inv = FindObjectOfType<DisplayInventory>();
+        inv = FindObjectOfType<DisplayInventory>();
+        sfx = FindObjectOfType<SoundManager>();
     }
 
     public void Interact()
@@ -27,22 +28,30 @@ public class InteractorTest : MonoBehaviour, IInteractable
             {
                 if (nextTarget == null)
                 {
-                    //Debug.Log(Random.Range(0, 100));
-                    GetComponent<Renderer>().material.color = Color.green;
+                    if (removeHint != null)
+                    {
+                        removeHint.SetActive(false);
+                    }
+                    inv.RemoveObject(requiredObjectID);
+                    Destroy(removeObject);
+                    Debug.Log("You don't have the next target set yet!");
                 } else {
-                    AchievementController.achCount[5] = 1;
+                    if (removeObject.name == "Window")
+                    {
+                        sfx.PlaySfx("Window");
+                    }
+                    /*AchievementController.achCount[5] = 1;*/
                     nextTarget.SetActive(true);
-                    nextTarget.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.SetActive(false);
                     removeHint.SetActive(false);
-/*                    inv.RemoveObject(requiredObjectID);*/
+                    inv.RemoveObject(requiredObjectID);
                     Destroy(removeObject);
                 }
+                
             }
             else
             {
-                //Debug.Log("You haven't acquired the required object yet.");
-                GetComponent<Renderer>().material.color = Color.red;
+                Debug.Log("You haven't acquired the required object yet.");
             }   
         }
         

@@ -7,7 +7,7 @@ using DG.Tweening;
 
 public class AchievementController : MonoBehaviour
 {
-    public bool achActive = false;
+    private bool achActive;
     public GameObject achCanvas;
     public GameObject achCanvas2;
 

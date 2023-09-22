@@ -22,6 +22,11 @@ public class CanvasManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void EnableMovement(Movement3D movement)
+    {
+        movement.enabled = true;
+    }
+
     public void EnableCanvas(GameObject obj)
     {
         obj.SetActive(true);

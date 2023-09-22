@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/3D lab2.unity
     guid: 74773e8a81b0c594784a66db8a0ad7b6
+  - enabled: 0
+    path: Assets/Scenes/3D lab.unity
+    guid: 0748cba842b923043969897cab64cf4d
   m_configObjects: {}
