@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4020706541082044450}
   - component: {fileID: 8891926269425111891}
+  - component: {fileID: 8525000093158808953}
   - component: {fileID: 2231261653178078944}
   - component: {fileID: 6916863738031071423}
   - component: {fileID: 1660680382087544405}
@@ -3208,6 +3209,34 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &8525000093158808953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079590096507506915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca002da428252441b92f28d83c8a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Shape:
+    rid: 4380952809756164105
+  m_Size: {x: -1.2499661, y: 5.329492, z: -0.6699619}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 7440
+  m_ShapeBox:
+    m_Center: {x: -0.62498116, y: 2.6647468, z: -0.33498192}
+    m_Extent: {x: 0.6249831, y: 2.6647458, z: 0.33498096}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4380952809756164105
+      type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
+      data: 
 --- !u!23 &2231261653178078944
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3283,6 +3312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8314368946930692526}
   - component: {fileID: 21341006165818028}
+  - component: {fileID: 6068830032009281834}
   - component: {fileID: 5349016004334267014}
   - component: {fileID: 2744189721406930042}
   - component: {fileID: 3620000641170846396}
@@ -3525,6 +3555,34 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &6068830032009281834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147466935467053575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca002da428252441b92f28d83c8a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Shape:
+    rid: 4380952825980518400
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1428
+  m_ShapeBox:
+    m_Center: {x: 0.5, y: 0.5, z: 1.5}
+    m_Extent: {x: 0.5, y: 0.5, z: 1.5}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4380952825980518400
+      type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
+      data: 
 --- !u!23 &5349016004334267014
 MeshRenderer:
   m_ObjectHideFlags: 0
